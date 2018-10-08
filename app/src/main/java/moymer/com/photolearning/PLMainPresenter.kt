@@ -49,7 +49,7 @@ class PLMainPresenter : PLMainContract.Presenter {
                 .check()
     }
 
-    override fun processCapturedPhoto(context: Context?, currentPhotoPath: String) : String {
+    override fun processCapturedPhoto(context: Context?, currentPhotoPath: String) : String? {
         context?.let {
             val cursor = it.contentResolver.query(Uri.parse(currentPhotoPath),
                     Array(1) { android.provider.MediaStore.Images.ImageColumns.DATA },

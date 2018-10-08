@@ -36,7 +36,7 @@ class PLMainFragment : PLMainContract.View, Fragment() {
 
         mPresenter.takeView(this)
 
-        arguments?.let {bundle ->
+        arguments?.let { bundle ->
             takeIf { bundle.containsKey("path") }?.apply {
                 mPresenter.setFilePath(bundle.getString("path"))
             }
@@ -117,9 +117,11 @@ class PLMainFragment : PLMainContract.View, Fragment() {
                 && requestCode == TAKE_PHOTO_REQUEST) {
 
             val processCapturedPhoto = mPresenter.processCapturedPhoto(context, mCurrentPhotoPath)
-            takeIf { processCapturedPhoto.isNotEmpty() }?.apply {
+            processCapturedPhoto?.let { processPhotoPath ->
+                takeIf { processPhotoPath.isNotEmpty() }?.apply {
 
-                Picasso.get().load(File(processCapturedPhoto)).into(imgv_photo)
+                    Picasso.get().load(File(processPhotoPath)).into(imgv_photo)
+                }
             }
 
         } else {

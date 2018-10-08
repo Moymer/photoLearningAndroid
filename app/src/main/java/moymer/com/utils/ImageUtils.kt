@@ -17,7 +17,7 @@ class ImageUtils {
 
     companion object {
 
-        fun resizeAndCropUserImage(selectedImageUri: Uri, context: Context, path: String, pathToSaveFile: String?): String {
+        fun resizeAndCropUserImage(selectedImageUri: Uri, context: Context, path: String, pathToSaveFile: String?): String? {
 
             if (path.isEmpty()) {
                 return selectedImageUri.toString()
@@ -32,7 +32,7 @@ class ImageUtils {
                 oldFile.delete()
             }
 
-            return file.path
+            return file?.path
         }
 
         fun cropToSquareAndResize(src: String, heightSize: Int): Bitmap {
@@ -107,21 +107,29 @@ class ImageUtils {
             return oriented
         }
 
-        fun bitmapToFile(context: Context, bitmap: Bitmap, pathToSaveFile: String?): File {
-            val tmpDirPath = FileUtils.getDirectoryWithPath("/$pathToSaveFile/", context)
-            val tmpDir = File(tmpDirPath)
-            val file = File(tmpDir, "Image"
-                    + Random().nextInt() + ".jpeg")
-            try {
-                val os = BufferedOutputStream(FileOutputStream(file))
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, os)
-                os.close()
+        fun bitmapToFile(context: Context, bitmap: Bitmap, pathToSaveFile: String?): File? {
+            pathToSaveFile?.let {
 
-            } catch (e: Exception) {
-                Log.e("Your Error Message", e.message)
+                val currentTimeMillis = System.currentTimeMillis()
+                
+                val tmpDirPath = FileUtils.getDirectoryWithPath("/$pathToSaveFile/", context)
+                val tmpDir = File(tmpDirPath)
+
+                val split = pathToSaveFile.split("(?<=[/])".toRegex())
+                val s = split[1]
+                val file = File(tmpDir, "$s$currentTimeMillis.jpeg")
+                try {
+                    val os = BufferedOutputStream(FileOutputStream(file))
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, os)
+                    os.close()
+
+                } catch (e: Exception) {
+                    Log.e("Your Error Message", e.message)
+                }
+                return file
             }
 
-            return file
+            return null
         }
 
     }
