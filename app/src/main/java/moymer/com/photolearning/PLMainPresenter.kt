@@ -9,6 +9,7 @@ import com.karumi.dexter.listener.PermissionDeniedResponse
 import com.karumi.dexter.listener.PermissionGrantedResponse
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.single.PermissionListener
+import moymer.com.data.CategoryRepository
 import moymer.com.utils.ImageUtils
 import java.io.File
 
@@ -49,7 +50,7 @@ class PLMainPresenter : PLMainContract.Presenter {
                 .check()
     }
 
-    override fun processCapturedPhoto(context: Context?, currentPhotoPath: String) : String? {
+    override fun processCapturedPhoto(context: Context?, currentPhotoPath: String): String? {
         context?.let {
             val cursor = it.contentResolver.query(Uri.parse(currentPhotoPath),
                     Array(1) { android.provider.MediaStore.Images.ImageColumns.DATA },
@@ -60,11 +61,24 @@ class PLMainPresenter : PLMainContract.Presenter {
             val file = File(photoPath)
             val uri = Uri.fromFile(file)
 
-            return ImageUtils.resizeAndCropUserImage(uri, it, photoPath, mFilePath)
+            val resizeAndCropUserImage = ImageUtils.resizeAndCropUserImage(uri, it, photoPath, mFilePath)
+
+            val fileUpload = File(resizeAndCropUserImage)
+            fileUpload.parentFile.absolutePath
+
+            mFilePath?.let {
+                uploadToCloud(it, File(fileUpload.parentFile.absolutePath))
+            }
+
+            return resizeAndCropUserImage
         } ?: return ""
     }
 
     override fun setFilePath(path: String?) {
         mFilePath = path
+    }
+
+    private fun uploadToCloud(cloudPath: String, file: File) {
+        CategoryRepository.instance.uploadDirToCloud(cloudPath, file)
     }
 }

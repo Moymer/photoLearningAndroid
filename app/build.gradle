@@ -70,3 +70,5 @@ dependencies {
     implementation "com.google.firebase:firebase-storage:16.0.3"
     implementation "org.greenrobot:eventbus:3.0.0"
 }
+
+apply plugin: 'com.google.gms.google-services'

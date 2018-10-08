@@ -120,6 +120,7 @@ class PLMainFragment : PLMainContract.View, Fragment() {
             processCapturedPhoto?.let { processPhotoPath ->
                 takeIf { processPhotoPath.isNotEmpty() }?.apply {
 
+
                     Picasso.get().load(File(processPhotoPath)).into(imgv_photo)
                 }
             }

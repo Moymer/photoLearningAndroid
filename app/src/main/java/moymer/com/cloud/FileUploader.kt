@@ -4,9 +4,15 @@ import moymer.com.cloud.google.CloudStorage
 import java.io.File
 
 
-object FileUploader : FileUploadSource {
+class FileUploader private constructor() : FileUploadSource {
 
     private var storageSource: FileUploadSource = CloudStorage()
+
+    private object Holder { val INSTANCE = FileUploader() }
+
+    companion object {
+        val instance: FileUploader by lazy { Holder.INSTANCE }
+    }
 
     enum class CloudSource {
         AMAZON, GOOGLE

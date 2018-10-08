@@ -17,5 +17,6 @@ interface PLMainContract {
         fun validatePermission(plMainActivity: PLMainActivity)
         fun processCapturedPhoto(context: Context?, currentPhotoPath: String) : String?
         fun setFilePath(path: String?)
+
     }
 }

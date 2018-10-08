@@ -3,7 +3,11 @@ package moymer.com.data
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
 import moymer.com.PLApplication
+import moymer.com.cloud.FileUploader
+import moymer.com.cloud.SCloudStorageCallback
 import moymer.com.db.Category
+import moymer.com.utils.CloudUtils
+import java.io.File
 import java.lang.reflect.Modifier
 
 class CategoryRepository private constructor(){
@@ -40,6 +44,16 @@ class CategoryRepository private constructor(){
                 return category
         }
         return Category()
+    }
+
+    fun uploadDirToCloud(filePathCloud: String, file: File) {
+
+        val key = CloudUtils.getPhotoKeyBase(filePathCloud)
+        FileUploader.instance.uploadDir(key, file, object: SCloudStorageCallback<String>(false) {
+            override fun uploadedFile(result: String, bytes: Long) {
+                println()
+            }
+        })
     }
 
 }

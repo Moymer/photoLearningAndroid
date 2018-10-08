@@ -116,8 +116,8 @@ class ImageUtils {
                 val tmpDir = File(tmpDirPath)
 
                 val split = pathToSaveFile.split("(?<=[/])".toRegex())
-                val s = split[1]
-                val file = File(tmpDir, "$s$currentTimeMillis.jpeg")
+                val categoryLabel = split[1]
+                val file = File(tmpDir, "$categoryLabel$currentTimeMillis.jpeg")
                 try {
                     val os = BufferedOutputStream(FileOutputStream(file))
                     bitmap.compress(Bitmap.CompressFormat.JPEG, 100, os)

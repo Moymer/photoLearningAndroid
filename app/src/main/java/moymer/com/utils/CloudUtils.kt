@@ -4,9 +4,8 @@ class CloudUtils {
 
     companion object {
 
-        fun getPhotoKeyBase(categoryId: String, label: String): String {
-            val currentTimeMillis = System.currentTimeMillis()
-            return  StringUtils.unaccent("learning/$categoryId/$label/$currentTimeMillis.jpg")
+        fun getPhotoKeyBase(filePath: String): String {
+            return  StringUtils.unaccent("learning/$filePath/")
         }
     }
 }
