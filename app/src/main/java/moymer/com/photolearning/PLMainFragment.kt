@@ -29,16 +29,18 @@ class PLMainFragment : PLMainContract.View, Fragment() {
 
     private var mCurrentPhotoPath = ""
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
 
         mPresenter.takeView(this)
+
+        arguments?.let {bundle ->
+            takeIf { bundle.containsKey("path") }?.apply {
+                mPresenter.setFilePath(bundle.getString("path"))
+            }
+        }
 
         return inflater.inflate(R.layout.fragment_plmain, container, false)
     }

@@ -17,7 +17,7 @@ class ImageUtils {
 
     companion object {
 
-        fun resizeAndCropUserImage(selectedImageUri: Uri, context: Context, path: String): String {
+        fun resizeAndCropUserImage(selectedImageUri: Uri, context: Context, path: String, pathToSaveFile: String?): String {
 
             if (path.isEmpty()) {
                 return selectedImageUri.toString()
@@ -25,7 +25,7 @@ class ImageUtils {
 
             val resizedImage = ImageUtils.cropToSquareAndResize(path, 600)
             val orientedBitmap = ImageUtils.rotateImage(resizedImage, path)
-            val file = bitmapToFile(context, orientedBitmap)
+            val file = bitmapToFile(context, orientedBitmap, pathToSaveFile)
 
             val oldFile = File(path)
             if (oldFile.exists()) {
@@ -107,8 +107,8 @@ class ImageUtils {
             return oriented
         }
 
-        fun bitmapToFile(context: Context, bitmap: Bitmap): File {
-            val tmpDirPath = FileUtils.getDirectoryWithPath("/photoLearning/", context)
+        fun bitmapToFile(context: Context, bitmap: Bitmap, pathToSaveFile: String?): File {
+            val tmpDirPath = FileUtils.getDirectoryWithPath("/$pathToSaveFile/", context)
             val tmpDir = File(tmpDirPath)
             val file = File(tmpDir, "Image"
                     + Random().nextInt() + ".jpeg")

@@ -15,6 +15,7 @@ import java.io.File
 class PLMainPresenter : PLMainContract.Presenter {
 
     private var mMainFragmentView: PLMainContract.View? = null
+    private var mFilePath: String? = null
 
     override fun takeView(view: PLMainContract.View) {
         mMainFragmentView = view
@@ -59,7 +60,11 @@ class PLMainPresenter : PLMainContract.Presenter {
             val file = File(photoPath)
             val uri = Uri.fromFile(file)
 
-            return ImageUtils.resizeAndCropUserImage(uri, it, photoPath)
+            return ImageUtils.resizeAndCropUserImage(uri, it, photoPath, mFilePath)
         } ?: return ""
+    }
+
+    override fun setFilePath(path: String?) {
+        mFilePath = path
     }
 }
