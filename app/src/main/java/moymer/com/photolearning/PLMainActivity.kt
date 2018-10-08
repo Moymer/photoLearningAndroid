@@ -12,7 +12,9 @@ import moymer.com.category.SCategoryVisionActivity
 
 class PLMainActivity : AppCompatActivity() {
 
-    private val plMainFragment = PLMainFragment()
+    private val plMainFragment by lazy {
+        PLMainFragment()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
