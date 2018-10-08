@@ -7,7 +7,7 @@ import moymer.com.utils.ActivityUtils
 
 class SCategoryVisionActivity: AppCompatActivity() {
 
-    lateinit var injectedFragment: SCategoryVisionFragment
+    private var injectedFragment: SCategoryVisionFragment = SCategoryVisionFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

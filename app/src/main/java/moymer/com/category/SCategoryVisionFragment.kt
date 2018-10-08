@@ -17,7 +17,7 @@ import moymer.com.photolearning.R
 class SCategoryVisionFragment: Fragment(), SCategoryVisionContract.View {
     var layoutManager: LinearLayoutManager? = null
 
-    lateinit var mPresenter: SCategoryVisionContract.Presenter
+    private var mPresenter: SCategoryVisionContract.Presenter = SCategoryVisionPresenter()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.frag_category_vision, container, false)
@@ -29,16 +29,6 @@ class SCategoryVisionFragment: Fragment(), SCategoryVisionContract.View {
         super.onViewCreated(view, savedInstanceState)
         setRecyclerViewLayout()
 
-        if (mPresenter.getCategoryIdFromPreferences() == "") {
-            iv_back_categories.visibility = View.GONE
-        }
-
-        iv_back_categories.setOnClickListener {
-            activity?.onBackPressed()
-        }
-        tv_try_again.setOnClickListener {
-            mPresenter.getCategories()
-        }
     }
 
     override fun onResume() {
@@ -70,14 +60,6 @@ class SCategoryVisionFragment: Fragment(), SCategoryVisionContract.View {
             iv_loading_categories.visibility = View.VISIBLE
         } else {
             iv_loading_categories.visibility = View.GONE
-        }
-    }
-
-    override fun showNoInternet(show: Boolean) {
-        if (show) {
-            rl_no_internet_container.visibility = View.VISIBLE
-        } else {
-            rl_no_internet_container.visibility = View.GONE
         }
     }
 }

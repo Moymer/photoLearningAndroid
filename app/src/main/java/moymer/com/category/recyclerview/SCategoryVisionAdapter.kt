@@ -91,8 +91,6 @@ class SCategoryVisionAdapter (private val context: Context?, val presenter: SCat
                 }
 
                 holder.countContainer.setOnClickListener {
-                    holder.arrow.clearAnimation()
-                    category.opened = true
                     launchLearnedVisionWordsActivity(category)
                 }
 

@@ -15,7 +15,6 @@ interface SCategoryVisionContract {
     interface View : BaseView<Presenter> {
         fun getContext(): Context?
         fun showLoading(show: Boolean)
-        fun showNoInternet(show: Boolean)
         fun showCategories(show: Boolean)
     }
 

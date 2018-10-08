@@ -1,7 +1,6 @@
 package moymer.com.category
 
 import moymer.com.data.CategoryRepository
-import moymer.com.data.SCallback
 import moymer.com.db.Category
 import java.util.*
 import kotlin.collections.ArrayList
@@ -10,8 +9,7 @@ import kotlin.collections.ArrayList
  * Created by gabriellins @ moymer
  * on 31/07/18.
  */
-class SCategoryVisionPresenter constructor(private val mCategoryRepository: CategoryRepository)
-                                            : SCategoryVisionContract.Presenter {
+class SCategoryVisionPresenter: SCategoryVisionContract.Presenter {
 
     private var mCategoryVisionView: SCategoryVisionContract.View? = null
     private var mCategoryVisionAdapterView: SCategoryVisionContract.Adapter? = null
@@ -32,32 +30,8 @@ class SCategoryVisionPresenter constructor(private val mCategoryRepository: Cate
     }
 
     override fun getCategories() {
-        mCategoryVisionView?.showCategories(false)
-        mCategoryVisionView?.showNoInternet(false)
-        mCategoryVisionView?.showLoading(true)
-        mCategoryRepository.getCategories(object: SCallback<ArrayList<Category>>(true) {
-            override fun onSuccess(result: ArrayList<Category>) {
-
-                mCategoryList = result
-                val locale = getLocale()
-
-                mCategoryList.sortWith(Comparator { o1: Category, o2: Category ->
-
-                    //TODO Ver num jeito de substituir os !!
-                    o1.title[locale]!!.compareTo(o2.title[locale]!!)
-                })
-
-                mCategoryVisionView?.showLoading(false)
-                mCategoryVisionView?.showCategories(true)
-                mCategoryVisionAdapterView?.setCategoryList(mCategoryList)
-
-            }
-
-            override fun onFailure(errorDescription: String) {
-                mCategoryVisionView?.showLoading(false)
-                mCategoryVisionView?.showNoInternet(true)
-            }
-        })
+        mCategoryList = CategoryRepository.instance.getCategoriesFromJson()
+        mCategoryVisionAdapterView?.setCategoryList(mCategoryList)
     }
 
     override fun dropAdapterView() {
