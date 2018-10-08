@@ -13,6 +13,7 @@ import android.widget.RelativeLayout
 import kotlinx.android.synthetic.main.item_learned_word.view.*
 import moymer.com.photolearning.PLMainActivity
 import moymer.com.photolearning.R
+import moymer.com.utils.StringUtils
 import java.text.MessageFormat
 import java.util.concurrent.TimeUnit
 
@@ -67,7 +68,7 @@ class SLearnedWordsVisionAdapter (private val context: Context?, val presenter: 
 
     private fun launchDefinitionActivity(value: String) {
         val intent = Intent(context, PLMainActivity::class.java)
-        val path = mPresenter.getCategoryId() + "/" + value
+        val path = StringUtils.removeWhitespaces(StringUtils.unaccent(mPresenter.getCategoryId() + "/" + value))
         intent.putExtra("path", path)
         context?.startActivity(intent)
     }
