@@ -13,12 +13,43 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "serviceAddress", '"https://svc.dialetto.app"')
+
+        buildConfigField("String", "interval", '"gs://moymer-demo.appspot.com"')
+        buildConfigField("String", "intervalPublicAddress", '"https://storage.googleapis.com/moymer-demo.appspot.com"')
+
+        //amazon
+        buildConfigField("String", "cloudFrontAddress", '"http://appdev.vliz.tv"')
+
+        multiDexEnabled true
+
+        vectorDrawables.useSupportLibrary = true
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+        dev {
+            applicationIdSuffix ".dev"
+            buildConfigField("String", "serviceAddress", '"https://dev.dialetto.app"')
+            //google
+            buildConfigField("String", "interval", '"gs://moymer-dev.appspot.com"')
+            buildConfigField("String", "intervalPublicAddress", '"https://storage.googleapis.com/moymer-dev.appspot.com"')
+            //resConfigs "en", "xxhdpi"
+        }
+
+        prod {
+        }
+    }
+    lintOptions {
+        disable 'RestrictedApi'
     }
 }
 
@@ -34,4 +65,8 @@ dependencies {
 
     implementation "com.google.code.gson:gson:2.8.2"
     implementation 'com.karumi:dexter:5.0.0'
+    implementation "com.squareup.picasso:picasso:2.71828"
+
+    implementation "com.google.firebase:firebase-storage:16.0.3"
+    implementation "org.greenrobot:eventbus:3.0.0"
 }
