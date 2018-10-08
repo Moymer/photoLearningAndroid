@@ -22,7 +22,8 @@
 
         <activity android:name=".PLMainActivity"
             android:screenOrientation="portrait"/>
-
+        <activity android:name="moymer.com.learnedwords.SLearnedWordsVisionActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
