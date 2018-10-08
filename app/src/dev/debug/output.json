@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "346463658900",
+    "firebase_url": "https://moymer-dev.firebaseio.com",
+    "project_id": "moymer-dev",
+    "storage_bucket": "moymer-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346463658900:android:19dd2a15bca81c11",
+        "android_client_info": {
+          "package_name": "com.moymer.spoken.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "346463658900-traormnbjp4fftj47l7qohp7b9qf6cl2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2d0rKwAB5cGjQgonUN9Fr6dVM4QeGsHM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346463658900:android:b9d0718432f2918b",
+        "android_client_info": {
+          "package_name": "moymer.com.photolearning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "346463658900-traormnbjp4fftj47l7qohp7b9qf6cl2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2d0rKwAB5cGjQgonUN9Fr6dVM4QeGsHM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
