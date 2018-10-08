@@ -1,0 +1,525 @@
+[
+  {
+    "categoryId": "babiestoys",
+    "title": {
+      "en": "🎮 babies & toys",
+      "pt": "🎮 bebês & brinquedos",
+      "es": "🎮 bebés y juguetes"
+    },
+    "description": {
+      "en": "point to <b>baby</b> objects and <b>toys</b> to discover new words",
+      "pt": "aponte para objetos de <b>bebês</b> e <b>brinquedos</b> para descobrir o significado",
+      "es": "apunte hacia objetos de <b>bebés</b> y <b>juguetes</b> para descubrir su significado"
+    },
+    "url":"https://storage.googleapis.com/moymer-dev.appspot.com/smartcam/babiestoys.tflite",
+    "labels": [
+      "action figure",
+      "baby bottle",
+      "baby stroller",
+      "bib",
+      "boardgame",
+      "building block",
+      "card games",
+      "diaper",
+      "dice",
+      "doll",
+      "fidget spinner",
+      "jigsaw puzzle",
+      "pacifier",
+      "rubber duck",
+      "rubik's cube",
+      "teddy bear",
+      "toy car",
+      "tricycle",
+      "video game console",
+      "yo-yo"
+    ]
+  },
+  {
+    "categoryId": "clothesacessories",
+    "title": {
+      "en": "👠 clothes & acessories",
+      "pt": "👠 roupas & acessórios",
+      "es": "👠 ropas y accesorios"
+    },
+    "description": {
+      "en": "point to <b>clothes</b> and <b>accessories</b> to discover new wordss",
+      "pt": "aponte para <b>roupas</b> e <b>acessórios</b> para descobrir o significado",
+      "es": "apunte hacia <b>ropas</b> y <b>accesorios</b> para descubrir su significado"
+    },
+    "url":"https://storage.googleapis.com/moymer-dev.appspot.com/smartcam/clothesacessories.tflite",
+    "labels": [
+      "backpack bag",
+      "belt",
+      "boots",
+      "bra",
+      "bracelet",
+      "earring",
+      "flip flop",
+      "glasses",
+      "hat",
+      "high heels",
+      "jacket",
+      "jeans",
+      "necklace",
+      "pants",
+      "purse",
+      "ring",
+      "shirt",
+      "shoe",
+      "skirt",
+      "slippers",
+      "socks",
+      "suitcase",
+      "sunglasses",
+      "underwear",
+      "wallet",
+      "watch"
+    ]
+  },
+  {
+    "categoryId": "constructiontools",
+    "title": {
+      "en": "🔨 tools",
+      "pt": "🔨 ferramentas",
+      "es": "🔨 herramientas"
+    },
+    "description": {
+      "en": "point to <b>construction tools</b> to discover new words",
+      "pt": "aponte para <b>ferramentas de construção</b> para descobrir o significado",
+      "es": "apunte hacia <b>herramientas de construcción</b> para descubrir su significado"
+    },
+    "url":"https://storage.googleapis.com/moymer-dev.appspot.com/smartcam/constructiontools.tflite",
+    "labels": [
+      "drill",
+      "hammer",
+      "mallet",
+      "measure tape",
+      "plier",
+      "ruler",
+      "saw (tool)",
+      "screw",
+      "screwdriver",
+      "shovel",
+      "wrench"
+    ]
+  },
+  {
+    "categoryId": "kitchenutensils",
+    "title": {
+      "en": "🍽 kitchen & utensils",
+      "pt": "🍽 cozinha & utensílios",
+      "es": "🍽 cocina y utensilios"
+    },
+    "description": {
+      "en": "point to <b>kitchen</b> objects and <b>utensils</b> to discover new words",
+      "pt": "aponte para objetos de <b>cozinha</b> e <b>utensílios</b> para descobrir o significado",
+      "es": "apunte hacia objetos de <b>cocina</b> y <b>utensilios</b> para descubrir su significado"
+    },
+    "url":"https://storage.googleapis.com/moymer-dev.appspot.com/smartcam/kitchenutensils.tflite",
+    "labels": [
+      "blender",
+      "bottle",
+      "bowl",
+      "can opener",
+      "cheese cutter",
+      "chef knife",
+      "corkscrew",
+      "dishwasher",
+      "fork",
+      "pan",
+      "funnel",
+      "glass",
+      "grater",
+      "jar",
+      "kettle",
+      "kitchen sieve",
+      "ladle",
+      "measuring cup",
+      "measuring spoon",
+      "microwave",
+      "oven",
+      "oven glove",
+      "pastry brush",
+      "peeler",
+      "pizza cutter",
+      "plastic straw",
+      "plate",
+      "refrigerator",
+      "rolling pin",
+      "spatula",
+      "sponge",
+      "spoon",
+      "stool",
+      "stove top",
+      "table knife",
+      "toaster",
+      "tongs",
+      "whisk"
+    ]
+  },
+  {
+    "categoryId": "music",
+    "title": {
+      "en": "🎸 music",
+      "pt": "🎸 música",
+      "es": "🎸 música"
+    },
+    "description": {
+      "en": "point to <b>musical instruments</b> to discover new words",
+      "pt": "aponte para <b>instrumentos musicais</b> para descobrir o significado",
+      "es": "apunte hacia <b>instrumentos musicales</b> para descubrir su significado"
+    },
+    "url":"https://storage.googleapis.com/moymer-dev.appspot.com/smartcam/music.tflite",
+    "labels": [
+      "accordion",
+      "acoustic guitar",
+      "cello",
+      "drums",
+      "eletric guitar",
+      "flute",
+      "harmonica",
+      "microphone",
+      "music sheet",
+      "piano",
+      "saxophone",
+      "trumpet",
+      "violin"
+    ]
+  },
+  {
+    "categoryId": "natureanimals",
+    "title": {
+      "en": "🌴 nature & animals",
+      "pt": "🌴 natureza & animais",
+      "es": "🌴 naturaleza y animales"
+    },
+    "description": {
+      "en": "point to the <b>nature</b> and <b>animals</b> to discover new words",
+      "pt": "aponte para a <b>natuza</b> e <b>animais</b> para descobrir o significado",
+      "es": "apunte hacia la <b>naturaleza</b> y <b>animales</b> para descubrir su significado"
+    },
+    "url":"https://storage.googleapis.com/moymer-dev.appspot.com/smartcam/natureanimals.tflite",
+    "labels": [
+      "fish",
+      "beach",
+      "bird",
+      "blue sky",
+      "bush",
+      "butterfly",
+      "cactus",
+      "cat",
+      "cow",
+      "daisy",
+      "dog",
+      "flower",
+      "frog",
+      "goose",
+      "hamster",
+      "horse",
+      "lizard",
+      "mountain",
+      "orchid",
+      "palm tree",
+      "turtle",
+      "pine tree",
+      "rose",
+      "stone",
+      "tree",
+      "waterfall"
+    ]
+  },
+  {
+    "categoryId": "onthestreet",
+    "title": {
+      "en": "🏠 architecture & urbanism",
+      "pt": "🏠 arquitetura & urbanismo",
+      "es": "🏠 arquitectura y urbanismo"
+    },
+    "description": {
+      "en": "point to <b>constructions</b> on the street to discover new words",
+      "pt": "aponte para <b>obras</b> e <b>construções</b> na rua para descobrir o significado",
+      "es": "apunte hacia <b>obras</b> y <b>construcciones</b> en la calle para descubrir su significado"
+    },
+    "url":"https://storage.googleapis.com/moymer-dev.appspot.com/smartcam/onthestreet.tflite",
+    "labels": [
+      "building",
+      "bus stop",
+      "crosswalk",
+      "house",
+      "park",
+      "street",
+      "traffic light",
+      "traffic sign"
+    ]
+  },
+  {
+    "categoryId": "peoplebody",
+    "title": {
+      "en": "🖐 people & body",
+      "pt": "🖐 pessoas & corpo",
+      "es": "🖐 personas y cuerpo"
+    },
+    "description": {
+      "en": "point to <b>people</b> and <b>body parts</b> to discover new words",
+      "pt": "aponte para <b>pessoas</b> e <b>partes do corpo</b> para descobrir o significado",
+      "es": "apunte hacia <b>personas</b> y <b>partes del cuerpo</b> para descubrir su significado"
+    },
+    "url":"https://storage.googleapis.com/moymer-dev.appspot.com/smartcam/peoplebody.tflite",
+    "labels": [
+      "arm",
+      "baby",
+      "ear",
+      "eye",
+      "face",
+      "foot",
+      "hair",
+      "hand",
+      "leg",
+      "mouth",
+      "nose",
+      "person"
+    ]
+  },
+  {
+    "categoryId": "schoolsoffice",
+    "title": {
+      "en": "📝 school & stationery",
+      "pt": "📝 escola & papelaria",
+      "es": "📝 escuela y papelería"
+    },
+    "description": {
+      "en": "point to <b>school</b> objects and <b>stationery</b> to discover new words",
+      "pt": "aponte para objetos de <b>escola</b> e <b>papelaria</b> para descobrir o significado",
+      "es": "apunte hacia objetos de <b>escuela</b> y <b>papelería</b> para descubrir su significado"
+    },
+    "url":"https://storage.googleapis.com/moymer-dev.appspot.com/smartcam/schoolsoffice.tflite",
+    "labels": [
+      "book",
+      "calculator",
+      "desk calendar",
+      "desk globe",
+      "envelope",
+      "eraser",
+      "glue",
+      "paint brush",
+      "paper",
+      "paper clip",
+      "pen",
+      "pencil case",
+      "ruler",
+      "school bag",
+      "scissors",
+      "sharpener",
+      "stapler"
+    ]
+  },
+  {
+    "categoryId": "sports",
+    "title": {
+      "en": "🎾 sports",
+      "pt": "🎾 esportes",
+      "es": "🎾 deportes"
+    },
+    "description": {
+      "en": "point to <b>sports</b> objects to discover new words",
+      "pt": "aponte para objetos de <b>esporte</b> para descobrir o significado",
+      "es": "apunte hacia objetos de <b>deporte</b> para descubrir su significado"
+    },
+    "url":"https://storage.googleapis.com/moymer-dev.appspot.com/smartcam/sports.tflite",
+    "labels": [
+      "ball",
+      "baseball bat",
+      "basketball hoop",
+      "bike helmet",
+      "billiard",
+      "bowling pin",
+      "boxing glove",
+      "dumbbell",
+      "goal post",
+      "kick scooter",
+      "racket",
+      "rollerblade",
+      "shuttlecock",
+      "skate board",
+      "surfboard",
+      "table tennis racket",
+      "tennis ball"
+    ]
+  },
+  {
+    "categoryId": "tech",
+    "title": {
+      "en": "📱 tech",
+      "pt": "📱 tech",
+      "es": "📱 tech"
+    },
+    "description": {
+      "en": "point to <b>tech</b> and <b>eletronic</b> objects to discover new words",
+      "pt": "aponte para objetos de <b>tecnologia</b> para descobrir novos significados",
+      "es": "apunte hacia objetos <b>tecnológicos</b> para descubrir su significado"
+    },
+    "url":"https://storage.googleapis.com/moymer-dev.appspot.com/smartcam/tech.tflite",
+    "labels": [
+      "alarm clock",
+      "computer keyboard",
+      "computer mouse",
+      "drone",
+      "earbuds",
+      "headphones",
+      "laptop",
+      "photo camera",
+      "printer",
+      "remote control",
+      "smartphone",
+      "television",
+      "watch"
+    ]
+  },
+  {
+    "categoryId": "transportation",
+    "title": {
+      "en": "🚙 transportation",
+      "pt": "🚙 transportes",
+      "es": "🚙 transportes"
+    },
+    "description": {
+      "en": "point to <b>transportation means</b> to discover new words",
+      "pt": "aponte para <b>meios de transporte</b> para descobrir novos significados",
+      "es": "apunte hacia <b>medios de transporte</b> para descubrir su significado"
+    },
+    "url":"https://storage.googleapis.com/moymer-dev.appspot.com/smartcam/transportation.tflite",
+    "labels": [
+      "bicycle",
+      "boat",
+      "bus",
+      "car",
+      "helicopter",
+      "hot air balloon",
+      "motorcycle",
+      "plane",
+      "ship",
+      "train",
+      "truck"
+    ]
+  },
+  {
+    "categoryId": "furniturehouse",
+    "title": {
+      "en": "🚪 furniture & house",
+      "pt": "🚪 móveis & casa",
+      "es": "🚪 muebles y casa"
+    },
+    "description": {
+      "en": "point to <b>furnitures</b> and <b>house</b> objects to discover new words",
+      "pt": "aponte para <b>móveis</b> e objetos de <b>casa</b> para descobrir novos significados",
+      "es": "apunte hacia <b>muebles</b> y objetos de <b>casa</b> para descubrir su significado"
+    },
+    "url":"https://storage.googleapis.com/moymer-dev.appspot.com/smartcam/transportation.tflite",
+    "labels": [
+      "armchair",
+      "bathtub",
+      "bed",
+      "bench",
+      "ceiling light",
+      "chair",
+      "couch",
+      "desk",
+      "door",
+      "fan",
+      "lamp",
+      "nightstand",
+      "painting",
+      "pillow",
+      "potted plant",
+      "sculpture",
+      "shower",
+      "sink",
+      "table",
+      "tap",
+      "toilet",
+      "toilet paper",
+      "towel",
+      "wardrobe",
+      "window"
+    ]
+  },
+  {
+    "categoryId": "food",
+    "title": {
+      "en": "🍕 food",
+      "pt": "🍕 comida",
+      "es": "🍕 comida"
+    },
+    "description": {
+      "en": "point to <b>foods and drinks</b> to discover new words",
+      "pt": "aponte para <b>comidas e bebidas</b> para descobrir novos significados",
+      "es": "apunte hacia <b>comidas</b> y <b>bebidas</b> para descubrir su significado"
+    },
+    "url":"https://storage.googleapis.com/moymer-dev.appspot.com/smartcam/transportation.tflite",
+    "labels": [
+      "apple",
+      "artichoke",
+      "aspargus",
+      "avocado",
+      "bacon",
+      "banana",
+      "beetroot",
+      "blackberry",
+      "blueberry",
+      "bread",
+      "broccoli",
+      "cabbage",
+      "cake",
+      "carrot",
+      "cashew",
+      "cauliflower",
+      "cherry",
+      "chickpea",
+      "corn",
+      "cucumber",
+      "cup of coffe",
+      "donut",
+      "eggplant",
+      "eggs",
+      "french fries",
+      "garlic",
+      "grape",
+      "green juice",
+      "hamburger",
+      "hot dog",
+      "kiwi",
+      "leek",
+      "lemon",
+      "lettuce",
+      "mango",
+      "melon",
+      "nut",
+      "onion",
+      "orange",
+      "orange juice",
+      "papaya",
+      "parsley",
+      "pea",
+      "pear",
+      "pie",
+      "pineapple",
+      "pizza",
+      "potato",
+      "pumpkin",
+      "raspberry",
+      "red bell pepper",
+      "sandwich",
+      "spring onion",
+      "steak",
+      "strawberry",
+      "sushi",
+      "sweet potato",
+      "taco",
+      "tomato",
+      "water bottle",
+      "watermelon",
+      "zucchini"
+    ]
+  }
+]
