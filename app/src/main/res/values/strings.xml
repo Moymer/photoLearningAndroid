@@ -1,6 +1,394 @@
 <resources>
-    <string name="app_name">photoLearning</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- NOTIFICATIONS -->
+    <string name="pt_new_answer_question">dialetto</string>
+    <string name="p_new_answer_question">%1$s \@%2$s answered your question</string>
+    <string name="pt_new_reply_answer">dialetto</string>
+    <string name="p_new_reply_answer">%1$s \@%2$s sent you an answer</string>
+
+    <string name="app_name" translatable="false">dialetto</string>
+    <string name="FACEBOOK_APP_ID" translatable="false">282694309152174</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN" translatable="false">a273646741693144da9901d36d8c9850</string>
+
+    <string name="ok">Ok</string>
+    <!-- Create Account/Login - Main -->
+    <string name="spoken_intro">practice new languages with people from all around the world!</string>
+    <string name="start">begin</string>
+
+    <!-- Create Account/Login - Tutorial -->
+    <string name="_continue">next</string>
+
+    <string name="hint_enter_the_club_title">join the club</string>
+    <string name="hint_enter_the_club_message">practice speaking and writing in new languages in a fun way with people from all around the world</string>
+    <string name="hint_enter_the_club_example_question" translatable="false">what do you love the most about the beach?</string>
+
+    <string name="hint_create_questions_title">ask questions</string>
+    <string name="hint_create_questions_message">record and write a question using your daily word for other people to respond</string>
+    <string name="hint_create_questions_example_word" translatable="false">dream</string>
+    <string name="hint_create_questions_example_question" translatable="false">what’s your biggest dream?</string>
+
+    <string name="hint_answer_title">answer</string>
+    <string name="hint_answer_message">practice answering questions created by other people with audio and text and learn new words</string>
+    <string name="hint_answer_example_word" translatable="false">whale</string>
+    <string name="hint_answer_example_answer" translatable="false">I love whales because I think they are so cute! &#x1F60D;</string>
+
+    <string name="hint_chat_title">keep the conversation going</string>
+    <string name="hint_chat_message">you have 24h to answer or the conversation ends</string>
+
+    <!-- Create Account/Login - Enter -->
+    <string name="enter_with_phone">use phone</string>
+    <string name="phone">phone</string>
+    <string name="confirm_terms_and_privacy">By entering you confirm that you have read and agreed to our terms of service and privacy policy.</string>
+    <string name="use_terms">terms of service</string>
+    <string name="privacy_policy">privacy policy</string>
+
+    <!-- Create Account/Login - Welcome -->
+    <string name="welcome">welcome!</string>
+    <string name="choose_level">choose level</string>
+    <string name="choose_level_message">now, what\'s your level of %1$s</string>
+
+    <string name="choose_language">start by choosing the language you want to practice</string>
+    <string name="practice">practice</string>
+
+    <!-- Idiomas e níveis -->
+    <string name="lang_en">english</string>
+    <string name="lang_es">spanish</string>
+    <string name="lang_en_key" translatable="false">en</string>
+    <string name="lang_es_key" translatable="false">es</string>
+
+    <string name="level_basic">basic</string>
+    <string name="level_medium">intermediate</string>
+    <string name="level_advanced">advanced</string>
+
+    <!-- Create Account/Login - Promotional Code -->
+    <string name="promotional_code_title">promotional code</string>
+    <string name="promotional_code_message">have a promotional code? write it below:</string>
+    <string name="skip">skip</string>
+    <string name="inexistent_code">code doesn\'t exist</string>
+    <string name="no_internet">no internet</string>
+    <string name="promo_code_regex" translatable="false">^[0-9a-z._-]*$</string>
+
+    <!-- Create Account/Login - Username -->
+    <string name="username_regex" translatable="false">^@[0-9a-z._-]*$</string>
+    <string name="verify_username_regex" translatable="false">^([0-9a-z]+)([._-]([0-9a-z])+)*$</string>
+    <string name="regex_error_username">invalid name</string>
+    <string name="create_username_title">last step</string>
+    <string name="create_username_message">choose the name that will appear on your questions and answers</string>
+    <string name="create_account">create account</string>
+    <string name="username_already_on_use">unavailable name, choose another one!</string>
+
+    <!-- Create Account/Login - Dialetto Club Presentation -->
+    <string name="dialetto_club">dialetto club</string>
+    <string name="dialetto_club_50_off" formatted="false">dialetto club (50% off)</string>
+    <string name="get_dialetto_club">subscribe to dialetto club to join the club and have unlimited access to all functionalities and other exclusive benefits!</string>
+    <string name="see_all_benefits">see all <b>benefits</b></string>
+    <string name="see_all_benefits1">see all <b>benefits</b></string>
+    <string name="get_50p_off" formatted="false">get <b>50%</b> <b>discount</b></string>
+    <string name="i_want_to_start_free">start <b>for free</b></string>
+    <string name="profile_warning_trial">subscribe to <b>dialetto club</b> to keep you <b>progress</b> and other <b>exclusive benefits</b>!</string>
+
+    <!-- Create Account/Login - 7 days free -->
+    <string name="seven_days_free">try it for 7 days!</string>
+    <string name="you_got_7_free_days">you\'ve earned 7 days to try dialetto club for free!</string>
+    <string name="start_free_trial">start <b>free-trial</b></string>
+    <string name="offer_time_remaining"> remaining time for the offer: 7 days</string>
+    <string name="promo_code"> promotional code: %1$s </string>
+    <string name="promo_code_info"> since you\'ve used the code \"%1$s\" you\'ll have %2$s discount on the subscription value! </string>
+
+    <string name="enjoy_the_offer">on sale</string>
+    <string name="seven_days_promo_info">if you subscribe to dialetto club in 7 days, you\'ll have 50\% discount on the subscription value!</string>
+
+    <!-- Main - Creating Question of day -->
+    <string name="skip_question">skip</string>
+    <string name="daily_audio_question">audio question of the day</string>
+    <string name="daily_text_question">text question of the day</string>
+    <string name="audio_question">audio question</string>
+    <string name="text_question">text question</string>
+    <string name="rec_a_question">record a question using the word below for people to respond</string>
+    <string name="write_a_question">write a question using the word below for people to respond</string>
+    <string name="write_your_question">write your question…</string>
+    <string name="confirm_your_question">verify your question</string>
+    <string name="sending_question">sending your question…</string>
+    <string name="question_sent">question sent!</string>
+    <string name="change_word">change word</string>
+
+    <!-- Main - Common -->
+    <string name="record_at_least_1s">record at least 1 second</string>
+    <string name="press_x_to_cancel">tap X to cancel</string>
+    <string name="dialetto_premium">dialetto <b>club</b></string>
+    <string name="dialetto_premium_disccount">dialetto <b>club</b> (%1$s off)</string>
+    <string name="read_more">see all <b>benefits</b></string>
+    <string name="you_reached_answer_limit">you\'ve reached your limit of <b>5 daily</b> answers</string>
+    <string name="get_premium_for_unlimited_answers">subscribe to dialetto premium to have <b>unlimited answers</b> and other <b>exclusive beneftis</b>!</string>
+
+    <!-- Alert - Microphone Permission -->
+    <string name="microphone">microphone</string>
+    <string name="mic_permission_description">grant access to the microphone to create and answer questions and interact with other users!</string>
+    <string name="give_microphone_permission">&#x1F3A4; access <b>microphone</b></string>
+
+    <!-- Alert - File Permission -->
+    <string name="files">files</string>
+    <string name="files_permission_description">grant access to the files to optimize dialetto!</string>
+    <string name="give_files_permission">&#x1F4C1; access <b>files</b></string>
+
+    <!-- Main - Questions -->
+    <string name="questions">questions</string>
+    <plurals name="n_words">
+        <item quantity="one">&#x1F525; %d word</item>
+        <item quantity="other">&#x1F525; %d words</item>
+    </plurals>
+    <plurals name="words">
+        <item quantity="one">word</item>
+        <item quantity="other">words</item>
+    </plurals>
+    <string name="no_internet_card">no internet…</string>
+    <string name="try_again">try again</string>
+    <string name="card_option_cant_answer">I don\'t know how to answer</string>
+    <string name="card_option_inappropriate_content">inappropriate content</string>
+
+    <string name="sending_in_n">sending in %d</string>
+    <string name="touch_x_to_cancel">tap X to cancel</string>
+
+    <string name="empty_questions_title">no more questions for <b>today</b></string>
+    <string name="empty_questions_message">stay tuned, <b>more questions</b> are coming soon</string>
+
+    <string name="report_email_audio_body_question" translatable="false"><![CDATA[<br> <br> <br>
+                    <b>Mensagem:  </b> %6$s <br>
+                    <br><br>
+                     _______________           <br><br>
+                     <b> Usuário reportado: </b> %1$s <br>
+                     <b> Usuário repórter: </b> %2$s <br>
+                     <b> Tipo da denúncia: </b> %3$s <br>
+                     <b> ID da Pergunta: </b> %4$s <br>
+                     <b> Link do áudio: </b> %5$s <br>
+                    _______________
+                    ]]></string>
+    <string name="report_email_text_body_question" translatable="false">
+    <![CDATA[%1$s
+    <br><br><br><br>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\"> &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; </div>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\">
+        <b>Usuário reportado:&nbsp;</b>%2$s </div>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\">
+        <b>Usuário repórter:&nbsp;</b>%3$s </div>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\">
+        <b>Tipo da denúncia:&nbsp;</b>%4$s </div>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\">
+        <b>ID da Pergunta:</b>&nbsp;%5$s </div>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\">
+        <b>Mensagem do reportado:</b>&nbsp;%6$s </div>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\"> &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; </div>]]>
+    </string>
+
+    <!-- Main - Answers -->
+    <string name="answers">answers</string>
+    <string name="at_symbol" translatable="false">\@%1$s</string>
+    <string name="n_hours" translatable="false">%1$sh</string>
+    <string name="words_number"> 123 words</string>
+    <string name="empty_answer_title">no more <b>answers</b></string>
+    <string name="empty_answer_message"><b>answer</b> people and ask a new question <b>every day</b> to get more <b>responses</b></string>
+    <string name="report_email_audio_body_answer" translatable="false"><![CDATA[<br> <br> <br>
+                    <b>Mensagem:  </b> %7$s <br>
+                    <br><br>
+                     _______________           <br><br>
+                     <b> Usuário reportado: </b> %1$s <br>
+                     <b> Usuário repórter: </b> %2$s <br>
+                     <b> Tipo da denúncia: </b> %3$s <br>
+                     <b> ID da Resposta: </b> %4$s <br>
+                     <b> ID da Pergunta: </b> %5$s <br>
+                     <b> Link do áudio: </b> %6$s <br>
+                    _______________]]></string>
+    <string name="report_email_text_body_answer" translatable="false">
+    <![CDATA[%1$s
+    <br><br><br><br>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\"> &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; </div>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\">
+        <b>Usuário reportado:&nbsp;</b>%2$s </div>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\">
+        <b>Usuário repórter:&nbsp;</b>%3$s </div>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\">
+        <b>Tipo da denúncia:&nbsp;</b>%4$s </div>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\">
+        <b>ID da Resposta:</b>&nbsp;%5$s </div>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\">
+        <b>ID da Pergunta:</b>&nbsp;%6$s </div>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\">
+        <b>Mensagem do reportador:</b>&nbsp;%7$s </div>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\">
+        <b>Mensagem do reportado:</b>&nbsp;%8$s </div>
+    <div style=\"font-family: arial, sans-serif; font-size: 13px; margin: 0px; line-height: normal; color: rgb(69, 69, 69);\"> &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; </div>]]>
+    </string>
+    <string name="write_your_answer">write your answer…</string>
+
+    <!-- Profile - User Info -->
+    <string name="speaking">speaking</string>
+    <string name="listening">listening</string>
+    <string name="words_written">words\nwritten</string>
+    <string name="words_readed">words\nread</string>
+    <string name="level">level</string>
+    <string name="language">language</string>
+
+    <string name="premium">premium</string>
+    <string name="dialetto_club_briefing">subscribe to <b>dialetto club</b> to keep up with your <b>progress</b> and see how much you\'ve <b>practiced</b>!</string>
+
+    <string name="invite_friends">invite friends</string>
+    <string name="call_your_friends">do you like dialetto? invite your friends!</string>
+    <string name="call_your_friends_message">Check out this new app to practice english and spanish for free! You\'ll love it: <a href="https://dialetto.app/download-android">https://dialetto.app/download-android</a></string>
+
+    <!-- Profile - Contact -->
+    <string name="contact">contact</string>
+    <string name="send">send</string>
+    <string name="write_your_message">Write your message…</string>
+
+    <!-- Profile - Words -->
+    <string name="my_words">my words</string>
+    <string name="x_days_ago">{0,choice,0#today|1#1 day ago|1&lt; {0} days ago}</string>
+    <string name="get_premium_to_access_dict">subscribe to <b>dialetto club</b> to keep accessing your <b>own dictionary</b></string>
+    <plurals name="you_learned_n_words">
+        <item quantity="one">you\'ve already learned &#x1F525; %d word</item>
+        <item quantity="other">you\'ve already learned &#x1F525; %d words</item>
+    </plurals>
+    <string name="get_premium_to_see_dictionary">subscribe to <b>dialetto club</b> to access your <b>own dictionary</b> of learned words and get other <b>exclusive benefits</b>!</string>
+
+    <!-- Profile - Change Level -->
+    <string name="change_level">choose level</string>
+    <string name="want_to_change_level">do you want to change your level? choose your new level of %1$s</string>
+    <string name="define">choose</string>
+    <string name="change_language">change language</string>
+    <string name="want_to_change_language">do you want to change your language? choose which one you want to practice</string>
+    <string name="terms">terms</string>
+    <string name="privacy">privacy</string>
+    <string name="notifications">notifications</string>
+    <string name="terms_url">http://dialetto.app/terms</string>
+    <string name="privacy_url">http://dialetto.app/privacy</string>
+    <string name="definitions">definitions:</string>
+
+    <string name="dialetto_club_briefing1">subscribe to <b>dialetto club</b> to practice other languages</string>
+
+
+    <!-- Settings -->
+    <string name="settings">settings</string>
+
+    <!-- Definitions -->
+    <string name="create_question">create <b>question</b></string>
+    <string name="definitions_by">definitions by %1$s</string>
+    <string name="examples_by_wiktionary">examples and definitions by Wiktionary e Wikipedia</string>
+
+    <!-- MyWords -->
+    <string name="words_count" translatable="false">&#x1F525; %d</string>
+
+
+    <!-- Report successful dialog -->
+    <string name="report_dialog_title">Thanks for reporting</string>
+    <string name="report_dialog_message">We\'ll analyse what you\'ve reported and take appropriate action.</string>
+
+    <!-- No Internet Dialog -->
+    <string name="no_internet_message">Please, check you network connection and try again.</string>
+    <string name="no_internet_title">No internet</string>
+    <string name="report">report</string>
+
+    <!-- Billing -->
+    <string name="billing_premiun"><b>dialetto club</b> \nbenefits</string>
+    <string name="word_number" translatable="false">&#x1F525; <b>1.257</b></string>
+    <string name="words">words</string>
+
+    <string name="know_more">know more</string>
+    <string name="cancel">cancel</string>
+    <string name="alert_club_create_questions">subscribe to <b>dialetto club</b> to <b>create questions</b> and <b>practice</b> new words!</string>
+
+    <string name="become_premiun">become a dialetto club member to have unlimited access and many other benefits!</string>
+    <string name="daily_limit">you’ve reached your daily use limit</string>
+
+    <string name="billing_tip_1">use as <b>much as you want</b> with daily limitless answers</string>
+    <string name="billing_tip_2">keep <b>every word</b> you\'ve learned on your <b>dictionary</b></string>
+    <string name="billing_tip_3">keep up with your <b>progress</b> and see how much you\'ve <b>practiced</b></string>
+    <string name="billing_tip_4">use the <b>smart-cam</b> to discover new <b>words</b>!</string>
+    <string name="billing_tip_5">make new <b>friends</b> by practicing with people from all around the <b>world</b></string>
+    <string name="billing_tip_6">use <b>new functionalities</b> as they\'re released</string>
+    <string name="billing_tip_7"><b>practice english and spanish</b> and new languages that are coming soon</string>
+    <string name="billing_button">subscribe to <b>dialetto club</b></string>
+    <string name="promotion_text"><![CDATA[before: <b><strike>%1$s</strike></b> remaining time of the offer: <b>%2$s</b>]]></string>
+    <string name="promotion_with_code_text"><![CDATA[without code: <b><strike>%1$s</strike></b>]]></string>
+    <string name="promotion_text_card">discount \n %1$s</string>
+    <string name="week_discount" translatable="false"><![CDATA[%1$s <b>%2$s</b>]]></string>
+    <string name="code">code: \n</string>
+    <string name="discount_period">only for \n</string>
+    <string name="price" translatable="false"><b>%1$s%2$s</b>\n %3$s</string>
+    <string name="vantages"><b>all</b> \nbenefits \n<b>included</b></string>
+    <string name="only">only</string>
+    <string name="billing_info"><![CDATA[<b>An automatic charge will be made after 7 days in the amount of %1$s. Recurring charge every (every month), cancel anytime.</b> <br><br>If you choose to subscribe to dialetto Premium, the payment will be charged on your Google Play account and the renovation of your account will be charged approximately 24 hours before the end of the current period. The auto renew can be canceled at anytime by going to settings on the Google Play after the purchase.]]></string>
+    <string name="billing_info_internet_off"><b>An automatic charge will be made in the amount above. Recurring charge every (every month), cancel anytime.</b> \n\nIf you choose to subscribe to dialetto Premium, the payment will be charged on your Google Play account and the renovation of your account will be charged approximately 24 hours before the end of the current period. The auto renew can be canceled anytime by going to settings on the Google Play after the purchase.</string>
+    <string name="privacy_police">Privacy Policy</string>
+    <string name="billing_use_terms">Terms of Service</string>
+
+    <plurals name="n_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+
+    <plurals name="n_months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+
+    <plurals name="n_years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
+
+    <plurals name="n_weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+
+    <!-- Billing - Congratulations -->
+    <string name="welcome_to_the_club">welcome to dialetto club</string>
+    <string name="congratulations_dialetto_club">congratulations, now you\'re part of the dialetto club and have unlimited access to all functionalities</string>
+    <string name="we_expect_you_to_enjoy_dialetto_club">we hope you enjoy and have fun practicing languages on dialetto</string>
+    <string name="made_with_love_dialetto_club">made with &#x1F49B; by dialetto team</string>
+    <string name="finish">continue</string>
+
+    <!-- Billing - Pending Payment -->
+    <string name="you_have_a_pending_payment">you have a <b>pending payment</b></string>
+    <string name="payment_time_remaining">remaining\ntime:</string>
+    <string name="pending_payment_message">we couldn\'t confirm your <b>payment</b> while <b>renewing</b> your plan - you have <b>7 days</b> to verify the status or your plan will be <b>blocked</b></string>
+
+    <string name="dialetto">dialetto</string>
+    <string name="learn_english_speaking">your language practicing club</string>
+    <string name="version">version 0.0.1</string>
+    <string name="time_speaking" translatable="false"><font size="30">8</font><font color="#96A0A7" size="13">m</font><font size="30">47</font><font color="#96A0A7" size="13">s</font></string>
+    <string name="time_listening" translatable="false"><font size="30">5</font><font color="#96A0A7" size="13">m</font><font size="30">29</font><font color="#96A0A7" size="13">s</font></string>
+    <string name="jump">skip</string>
+    <string name="examples">examples</string>
+    <string name="examples_es">ejemplos</string>
+    <string name="type_answer">write your answer…</string>
+    <string name="answer_verb">answer...</string>
+    <string name="word">word:</string>
+
+    <string name="weekly">weekly</string>
+    <string name="monthly">monthly</string>
+    <string name="for_3_months">for 3 months</string>
+    <string name="for_6_months">for 6 months</string>
+    <string name="yearly">yearly</string>
+    <string name="sevens_days">7 days</string>
+    <string name="one_month">1 month</string>
+    <string name="three_months">3 months</string>
+    <string name="six_months">6 months</string>
+    <string name="one_year">1 year</string>
+
+    <!-- Vision -->
+    <string name="vision_hint">point to objects and save the meanings in your collection</string>
+    <string name="vision_hint_downloading">downloading &lt;b>%1$s&lt;/b> intelligence...</string>
+
+    <string name="smart_cam" translatable="false">smart-cam</string>
+    <string name="smart_cam_hint">choose a category to learn new words and try to discover all words in each category</string>
+    <string name="palm_tree" translatable="false">palm tree</string>
+    <string name="choose_category">categories</string>
+    <string name="choose_category_hint">choose a category to learn new words and try to discover all words in each category</string>
+    <string name="release_camera_hint">grant access to the the camera to use the <b>smart-cam</b> and discover <b>new words</b>!</string>
+    <string name="release_camera">&#x1F4F7; access <b>camera</b></string>
+    <string name="vision_premium">become a <b>dialetto club</b> member to use the <b>smart-cam</b> a have other <b>exclusive benefits</b>!</string>
+    <string name="continue_text">next</string>
+    <string name="choose_category_title">choose a category:</string>
+
 </resources>

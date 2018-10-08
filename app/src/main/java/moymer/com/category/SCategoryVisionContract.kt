@@ -25,9 +25,6 @@ interface SCategoryVisionContract {
         fun getCount(): Int
         fun getLocale(): String?
         fun getCategories()
-        fun setCategoryOpened(category: Category)
-        fun setCategoryIdInPreferences(categoryId: String)
-        fun getCategoryIdFromPreferences(): String
     }
 
 

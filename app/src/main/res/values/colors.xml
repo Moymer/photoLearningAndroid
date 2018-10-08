@@ -3,4 +3,50 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="red">#FE2163</color>
+    <color name="pink">#FE0EAC</color>
+    <color name="purple">#B910FE</color>
+
+    <color name="gray_tab_unselected">#0f000000</color>
+
+    <color name="light_blue">#0DB1FF</color>
+    <color name="light_blue50p">#800DB1FF</color>
+    <color name="light_blue20p">#330DB1FF</color>
+    <color name="black5p">#0C000000</color>
+    <color name="black10p">#19000000</color>
+    <color name="black20p">#33000000</color>
+    <color name="black30p">#4D000000</color>
+    <color name="black35p">#59000000</color>
+    <color name="black40p">#68000000</color>
+    <color name="black50p">#80000000</color>
+    <color name="black">#000000</color>
+
+    <color name="gray">#96A0A7</color>
+    <color name="gray2">#EFEFEF</color>
+    <color name="gray3">#CBD3D9</color>
+    <color name="background_gray10p">#19E3E3E3</color>
+    <color name="lighter_gray">#F1F1F1</color>
+    <color name="light_gray">#F9F9F9</color>
+    <color name="light_gray_text">#B5B5B5</color>
+    <color name="dark_gray">#707070</color>
+    <color name="dark_gray60p">#99707070</color>
+    <color name="dark_gray10p">#19707070</color>
+    <color name="face_gray">#F5F5F5</color>
+    <color name="disable_gray">#E4E4E4</color>
+    <color name="blue">#0BA1FF</color>
+    <color name="blue2">#0A9FFF</color>
+    <color name="dark_blue">#30496C</color>
+    <color name="blue_vision">#10DAFF</color>
+    <color name="blue_vision1">#10AAFF</color>
+    <color name="gray_vision">#32cbd3d9</color>
+    <color name="gray_vision1">#b4cbd3d9</color>
+
+    <color name="white90p">#E6FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="green">#00FF6C</color>
+    <color name="green2">#00FFA7</color>
+    <color name="white50p">#80FFFFFF</color>
+    <color name="interview_loading_hud_color">#B1000000</color>
+
 </resources>

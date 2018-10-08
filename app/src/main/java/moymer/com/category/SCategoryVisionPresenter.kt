@@ -1,6 +1,7 @@
 package moymer.com.category
 
 import moymer.com.data.CategoryRepository
+import moymer.com.data.SCallback
 import moymer.com.db.Category
 import java.util.*
 import kotlin.collections.ArrayList
@@ -65,5 +66,14 @@ class SCategoryVisionPresenter constructor(private val mCategoryRepository: Cate
 
     override fun getCount(): Int {
         return mCategoryList.size + 1       //incluindo o header no count
+    }
+
+    override fun getLocale(): String {
+        val locale = Locale.getDefault().language
+        return if (locale != "") {
+            locale
+        } else {
+            "en"
+        }
     }
 }
