@@ -1,19 +1,17 @@
-package com.moymer.spoken.usercases.main.vision.category
+package moymer.com.category
 
 import android.os.Bundle
-import com.moymer.spoken.R
-import com.moymer.spoken.SDaggerActivity
-import com.moymer.spoken.utils.ActivityUtils
-import javax.inject.Inject
+import android.support.v7.app.AppCompatActivity
+import moymer.com.photolearning.R
+import moymer.com.utils.ActivityUtils
 
-class SCategoryVisionActivity @Inject constructor(): SDaggerActivity() {
+class SCategoryVisionActivity: AppCompatActivity() {
 
-    @Inject
     lateinit var injectedFragment: SCategoryVisionFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_scontact)
+        setContentView(R.layout.activity_main)
 
         var categoryVisionFragment: SCategoryVisionFragment? = supportFragmentManager.findFragmentById(R.id.fragment_container) as SCategoryVisionFragment?
 
@@ -21,16 +19,5 @@ class SCategoryVisionActivity @Inject constructor(): SDaggerActivity() {
             categoryVisionFragment = injectedFragment
             ActivityUtils.addFragmentToActivity(supportFragmentManager, categoryVisionFragment, R.id.fragment_container)
         }
-
-        injectedFragment.arguments = intent?.extras
-
-        overridePendingTransition(R.anim.slide_in_bottom_top, R.anim.hold)
-
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        overridePendingTransition(R.anim.hold, R.anim.slide_out_top_bottom)
-
     }
 }

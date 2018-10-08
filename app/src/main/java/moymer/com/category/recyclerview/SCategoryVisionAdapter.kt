@@ -1,4 +1,4 @@
-package com.moymer.spoken.usercases.main.vision.category.recyclerview
+package moymer.com.category.recyclerview
 
 import android.app.Activity
 import android.app.Activity.RESULT_OK

@@ -1,24 +1,22 @@
-package com.moymer.spoken.usercases.main.vision.category
+package moymer.com.category
 
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.moymer.spoken.R
-import com.moymer.spoken.usercases.main.vision.category.recyclerview.SCategoryVisionAdapter
-import dagger.android.support.DaggerFragment
+import moymer.com.category.recyclerview.SCategoryVisionAdapter
 import kotlinx.android.synthetic.main.frag_category_vision.*
-import javax.inject.Inject
+import moymer.com.photolearning.R
 
 /**
  * Created by gabriellins @ moymer
  * on 31/07/18.
  */
-class SCategoryVisionFragment @Inject constructor() : DaggerFragment(), SCategoryVisionContract.View {
+class SCategoryVisionFragment: Fragment(), SCategoryVisionContract.View {
     var layoutManager: LinearLayoutManager? = null
 
-    @Inject
     lateinit var mPresenter: SCategoryVisionContract.Presenter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

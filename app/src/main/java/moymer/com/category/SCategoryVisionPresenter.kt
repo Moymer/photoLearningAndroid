@@ -1,30 +1,21 @@
-package com.moymer.spoken.usercases.main.vision.category
+package moymer.com.category
 
-import com.moymer.spoken.SPreferences
-import com.moymer.spoken.data.SCallback
-import com.moymer.spoken.data.user.UserRepository
-import com.moymer.spoken.data.vision.VisionRepository
-import com.moymer.spoken.db.entities.LanguageInfo
-import com.moymer.spoken.db.entities.VisionCategory
-import com.moymer.spoken.utils.InternetUtils
+import moymer.com.data.CategoryRepository
+import moymer.com.db.Category
 import java.util.*
-import javax.inject.Inject
 import kotlin.collections.ArrayList
 
 /**
  * Created by gabriellins @ moymer
  * on 31/07/18.
  */
-class SCategoryVisionPresenter @Inject constructor(private val mVisionRepository: VisionRepository,
-                                                   private val mUserRepository: UserRepository,
-                                                   private val mPreferences: SPreferences,
-                                           private val mInternetUtils: InternetUtils)
+class SCategoryVisionPresenter constructor(private val mCategoryRepository: CategoryRepository)
                                             : SCategoryVisionContract.Presenter {
 
     private var mCategoryVisionView: SCategoryVisionContract.View? = null
     private var mCategoryVisionAdapterView: SCategoryVisionContract.Adapter? = null
 
-    private var mCategoryList = ArrayList<VisionCategory>(0)
+    private var mCategoryList = ArrayList<Category>(0)
 
     override fun takeView(view: SCategoryVisionContract.View) {
         mCategoryVisionView = view
@@ -43,13 +34,13 @@ class SCategoryVisionPresenter @Inject constructor(private val mVisionRepository
         mCategoryVisionView?.showCategories(false)
         mCategoryVisionView?.showNoInternet(false)
         mCategoryVisionView?.showLoading(true)
-        mVisionRepository.getCategories(object: SCallback<ArrayList<VisionCategory>>(true) {
-            override fun onSuccess(result: ArrayList<VisionCategory>) {
+        mCategoryRepository.getCategories(object: SCallback<ArrayList<Category>>(true) {
+            override fun onSuccess(result: ArrayList<Category>) {
 
                 mCategoryList = result
                 val locale = getLocale()
 
-                mCategoryList.sortWith(Comparator { o1: VisionCategory, o2: VisionCategory ->
+                mCategoryList.sortWith(Comparator { o1: Category, o2: Category ->
 
                     //TODO Ver num jeito de substituir os !!
                     o1.title[locale]!!.compareTo(o2.title[locale]!!)
@@ -74,44 +65,5 @@ class SCategoryVisionPresenter @Inject constructor(private val mVisionRepository
 
     override fun getCount(): Int {
         return mCategoryList.size + 1       //incluindo o header no count
-    }
-
-    override fun getLocale(): String {
-        val locale = Locale.getDefault().language
-        return if (locale != "") {
-            locale
-        } else {
-            "en"
-        }
-    }
-
-    override fun setCategoryOpened(category: VisionCategory) {
-        mVisionRepository.insertCategory(category)
-    }
-
-    override fun setCategoryIdInPreferences(categoryId: String) {
-        mUserRepository.getLanguageInfoAsync(object : SCallback<LanguageInfo>(false) {
-            override fun onSuccess(result: LanguageInfo) {
-                mPreferences.storeSelectedVisionCategoryId(categoryId, result.language)
-            }
-
-            override fun onFailure(errorDescription: String) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
-        })
-    }
-
-    override fun getCategoryIdFromPreferences(): String {
-        var categoryId = ""
-        mUserRepository.getLanguageInfoAsync(object : SCallback<LanguageInfo>(true) {
-            override fun onSuccess(result: LanguageInfo) {
-                categoryId = mPreferences.retrievesSelectedVisionCategoryId(result.language)
-            }
-
-            override fun onFailure(errorDescription: String) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
-        })
-        return categoryId
     }
 }

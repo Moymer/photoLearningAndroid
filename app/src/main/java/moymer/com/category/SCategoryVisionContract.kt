@@ -1,9 +1,9 @@
-package com.moymer.spoken.usercases.main.vision.category
+package moymer.com.category
 
 import android.content.Context
-import com.moymer.spoken.db.entities.VisionCategory
 import com.moymer.spoken.di.qualifiers.utils.BasePresenter
 import com.moymer.spoken.di.qualifiers.utils.BaseView
+import moymer.com.db.Category
 import java.util.ArrayList
 
 /**
@@ -25,14 +25,14 @@ interface SCategoryVisionContract {
         fun getCount(): Int
         fun getLocale(): String?
         fun getCategories()
-        fun setCategoryOpened(category: VisionCategory)
+        fun setCategoryOpened(category: Category)
         fun setCategoryIdInPreferences(categoryId: String)
         fun getCategoryIdFromPreferences(): String
     }
 
 
     interface Adapter : BaseView<Presenter> {
-        fun setCategoryList(categories: ArrayList<VisionCategory>)
+        fun setCategoryList(categories: ArrayList<Category>)
     }
 
 }
