@@ -120,7 +120,7 @@ class ImageUtils {
                 val file = File(tmpDir, "$categoryLabel$currentTimeMillis.jpeg")
                 try {
                     val os = BufferedOutputStream(FileOutputStream(file))
-                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, os)
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 70, os)
                     os.close()
 
                 } catch (e: Exception) {

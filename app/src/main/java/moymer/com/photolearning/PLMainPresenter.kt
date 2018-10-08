@@ -17,6 +17,7 @@ class PLMainPresenter : PLMainContract.Presenter {
 
     private var mMainFragmentView: PLMainContract.View? = null
     private var mFilePath: String? = null
+    private var mResizeFilePath: String? = null
 
     override fun takeView(view: PLMainContract.View) {
         mMainFragmentView = view
@@ -60,17 +61,9 @@ class PLMainPresenter : PLMainContract.Presenter {
             cursor.close()
             val file = File(photoPath)
             val uri = Uri.fromFile(file)
+            mResizeFilePath = ImageUtils.resizeAndCropUserImage(uri, it, photoPath, mFilePath)
 
-            val resizeAndCropUserImage = ImageUtils.resizeAndCropUserImage(uri, it, photoPath, mFilePath)
-
-            val fileUpload = File(resizeAndCropUserImage)
-            fileUpload.parentFile.absolutePath
-
-            mFilePath?.let {
-                uploadToCloud(it, File(fileUpload.parentFile.absolutePath))
-            }
-
-            return resizeAndCropUserImage
+            return mResizeFilePath
         } ?: return ""
     }
 
@@ -78,7 +71,13 @@ class PLMainPresenter : PLMainContract.Presenter {
         mFilePath = path
     }
 
-    private fun uploadToCloud(cloudPath: String, file: File) {
-        CategoryRepository.instance.uploadDirToCloud(cloudPath, file)
+    override fun uploadToCloud() {
+
+        val fileUpload = File(mResizeFilePath)
+        val absolutePath = fileUpload.parentFile.absolutePath
+
+        mFilePath?.let {
+            CategoryRepository.instance.uploadDirToCloud(it, File(absolutePath))
+        }
     }
 }

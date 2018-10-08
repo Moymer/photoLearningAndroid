@@ -4,6 +4,7 @@ import android.content.Context
 import com.karumi.dexter.PermissionToken
 import com.moymer.spoken.di.qualifiers.utils.BasePresenter
 import com.moymer.spoken.di.qualifiers.utils.BaseView
+import java.io.File
 
 interface PLMainContract {
 
@@ -18,5 +19,6 @@ interface PLMainContract {
         fun processCapturedPhoto(context: Context?, currentPhotoPath: String) : String?
         fun setFilePath(path: String?)
 
+        fun uploadToCloud()
     }
 }
