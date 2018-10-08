@@ -7,27 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb105eb3-6878-4b03-b5af-4b9727e7f715" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionContract.kt" afterPath="$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionContract.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionFragment.kt" afterPath="$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionFragment.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionPresenter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionPresenter.kt" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/moymer/com/category/recyclerview/SCategoryVisionAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/moymer/com/category/recyclerview/SCategoryVisionAdapter.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/moymer/com/data/CategoryRepository.kt" afterPath="$PROJECT_DIR$/app/src/main/java/moymer/com/data/CategoryRepository.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/moymer/com/data/SCallback.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/moymer/com/db/Category.kt" afterPath="$PROJECT_DIR$/app/src/main/java/moymer/com/db/Category.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/moymer/com/photolearning/PLMainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/moymer/com/photolearning/PLMainActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/frag_category_vision.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/frag_category_vision.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,21 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SCategoryVisionAdapter.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SCategoryVisionAdapter.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/moymer/com/category/recyclerview/SCategoryVisionAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="92" column="58" lean-forward="false" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="model.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/assets/model.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="371">
+              <caret line="106" column="31" lean-forward="false" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -133,11 +103,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SCategoryVisionFragment.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SCategoryVisionFragment.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="607">
+              <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SCategoryVisionActivity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -146,7 +126,7 @@
       <file leaf-file-name="PLMainActivity.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/moymer/com/photolearning/PLMainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
+            <state relative-caret-position="675">
               <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="e#35#280#0" expanded="true" />
@@ -2292,12 +2272,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/moymer/com/PLApplication.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionPresenter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/moymer/com/category/recyclerview/SCategoryVisionAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/moymer/com/data/CategoryRepository.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/moymer/com/db/Category.kt" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/frag_category_vision.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/moymer/com/category/recyclerview/SCategoryVisionAdapter.kt" />
       </list>
     </option>
   </component>
@@ -2870,16 +2850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding>
-            <element signature="e#29#173#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionContract.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -2919,24 +2889,6 @@
         <state relative-caret-position="210">
           <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/moymer/com/category/recyclerview/SCategoryVisionAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="92" column="58" lean-forward="false" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/moymer/com/photolearning/PLMainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#35#280#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2998,10 +2950,36 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/moymer/com/photolearning/PLMainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#35#280#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/moymer/com/category/SCategoryVisionFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="607">
+          <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/moymer/com/category/recyclerview/SCategoryVisionAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="106" column="31" lean-forward="false" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
           <folding />
         </state>
       </provider>
