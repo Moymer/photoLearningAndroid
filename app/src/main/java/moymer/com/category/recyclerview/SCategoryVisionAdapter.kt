@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.item_category.view.*
 import kotlinx.android.synthetic.main.item_category_header.view.*
 import moymer.com.category.SCategoryVisionContract
 import moymer.com.db.Category
+import moymer.com.learnedwords.SLearnedWordsVisionActivity
 import moymer.com.photolearning.PLMainActivity
 import moymer.com.photolearning.R
 import java.util.*
@@ -105,7 +106,8 @@ class SCategoryVisionAdapter (private val context: Context?, val presenter: SCat
     }
 
     private fun launchCameraActivity(category: Category?) {
-        val intent = Intent(context, PLMainActivity::class.java)
+        val intent = Intent(context, SLearnedWordsVisionActivity::class.java)
+        intent.putExtra("categoryId", category?.categoryId)
         context?.startActivity(intent)
     }
 

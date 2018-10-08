@@ -8,4 +8,6 @@ data class Category (
         @Expose var description:  MutableMap<String, String>,
         @Expose var url: String,
         @Expose var labels: List<String>
-    )
+    ) {
+    constructor(): this ("", HashMap<String, String>(), HashMap<String, String>(), "", ArrayList<String>())
+}

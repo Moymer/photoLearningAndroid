@@ -34,5 +34,12 @@ class CategoryRepository private constructor(){
         return mCategories as ArrayList<Category>
     }
 
+    fun getCategoryFromId(categoryId: String): Category {
+        for (category in mCategories) {
+            if (category.categoryId == categoryId)
+                return category
+        }
+        return Category()
+    }
 
 }
