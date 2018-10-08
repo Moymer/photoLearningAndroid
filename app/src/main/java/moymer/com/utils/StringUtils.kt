@@ -16,6 +16,11 @@ class StringUtils {
                     .normalize(src, Normalizer.Form.NFD)
                     .replace("[^\\p{ASCII}]".toRegex(), "")
         }
+
+        fun removeWhitespaces(src: String) : String {
+            return src.replace("\\s".toRegex(), "")
+        }
+
     }
 
 }
