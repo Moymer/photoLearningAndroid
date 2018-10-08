@@ -4,6 +4,10 @@ package moymer.com.photolearning
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import moymer.com.utils.ActivityUtils
+import android.content.Intent
+import android.view.Menu
+import android.view.MenuItem
+
 
 class PLMainActivity : AppCompatActivity() {
 
@@ -21,5 +25,24 @@ class PLMainActivity : AppCompatActivity() {
         }
 
         mainFragment.arguments = intent?.extras
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.action_cut -> launchCategoriesActivity()
+
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun launchCategoriesActivity() {
+        val intent = Intent(this, PLMainActivity::class.java)
+        startActivity(intent)
     }
 }
