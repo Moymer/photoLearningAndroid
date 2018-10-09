@@ -16,6 +16,8 @@ interface SCategoryVisionContract {
         fun getContext(): Context?
         fun showLoading(show: Boolean)
         fun showCategories(show: Boolean)
+
+        fun showToast(message: String)
     }
 
     interface Presenter: BasePresenter<View> {
@@ -24,6 +26,7 @@ interface SCategoryVisionContract {
         fun getCount(): Int
         fun getLocale(): String?
         fun getCategories()
+        fun uploadToCloud(context: Context)
     }
 
 

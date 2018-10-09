@@ -46,14 +46,16 @@ class CategoryRepository private constructor(){
         return Category()
     }
 
-    fun uploadDirToCloud(filePathCloud: String, file: File) {
+    fun uploadDirToCloud(file: File, callback: SCallback<String>) {
 
-        val key = CloudUtils.getPhotoKeyBase(filePathCloud)
+        val key = CloudUtils.getPhotoKeyBase()
         FileUploader.instance.uploadDir(key, file, object: SCloudStorageCallback<String>(false) {
+
             override fun uploadedFile(result: String, bytes: Long) {
-                println()
+                takeIf { result.isNotEmpty() }?.apply {
+                    callback.onSuccessThread("Fotos enviadas com sucesso")
+                } ?: callback.onFailureThread("Não foi possivel enviar as fotos")
             }
         })
     }
-
 }

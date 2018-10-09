@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import moymer.com.category.recyclerview.SCategoryVisionAdapter
 import kotlinx.android.synthetic.main.frag_category_vision.*
 import moymer.com.photolearning.R
@@ -15,6 +16,7 @@ import moymer.com.photolearning.R
  * on 31/07/18.
  */
 class SCategoryVisionFragment: Fragment(), SCategoryVisionContract.View {
+
     var layoutManager: LinearLayoutManager? = null
 
     private var mPresenter: SCategoryVisionContract.Presenter = SCategoryVisionPresenter()
@@ -29,6 +31,11 @@ class SCategoryVisionFragment: Fragment(), SCategoryVisionContract.View {
         super.onViewCreated(view, savedInstanceState)
         setRecyclerViewLayout()
 
+        tv_upload.setOnClickListener {
+            it.context?.let {ctx ->
+                mPresenter.uploadToCloud(ctx)
+            }
+        }
     }
 
     override fun onResume() {
@@ -61,5 +68,9 @@ class SCategoryVisionFragment: Fragment(), SCategoryVisionContract.View {
         } else {
             iv_loading_categories.visibility = View.GONE
         }
+    }
+
+    override fun showToast(message: String) {
+        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
     }
 }

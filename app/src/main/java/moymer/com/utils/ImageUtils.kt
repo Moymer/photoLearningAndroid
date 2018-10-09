@@ -112,7 +112,7 @@ class ImageUtils {
 
                 val currentTimeMillis = System.currentTimeMillis()
                 
-                val tmpDirPath = FileUtils.getDirectoryWithPath("/$pathToSaveFile/", context)
+                val tmpDirPath = FileUtils.saveImageDirectory(pathToSaveFile, context)
                 val tmpDir = File(tmpDirPath)
 
                 val split = pathToSaveFile.split("(?<=[/])".toRegex())

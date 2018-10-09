@@ -89,7 +89,9 @@ class CloudStorage : FileUploadSource {
 
                     if (fileContentTypeToUpload == null || contentType === fileContentTypeToUpload) {
                         totalBytes += fileToUpload.length()
-                        val task = uploadFile (keyBase + filename, fileToUpload.absolutePath, contentType, fileCallback, true)
+
+                        val substringAfter = fileToUpload.absolutePath.substringAfter("files/")
+                        val task = uploadFile (substringAfter, fileToUpload.absolutePath, contentType, fileCallback, true)
                         uploadTasks.add(task)
                     }
                 }

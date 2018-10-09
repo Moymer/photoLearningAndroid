@@ -7,6 +7,8 @@ class FileUtils {
 
     companion object {
 
+        const val base = "/dialetto/learning/"
+
         fun getDirectoryWithPath(path: String?, context: Context): String {
             path?.let {
                 val dir = context.filesDir
@@ -21,6 +23,14 @@ class FileUtils {
             }
 
             return ""
+        }
+
+        fun getCloudDirectory(context: Context): String {
+            return getDirectoryWithPath(base,context)
+        }
+
+        fun saveImageDirectory(path: String?, context: Context): String {
+            return getDirectoryWithPath("$base$path", context)
         }
     }
 }

@@ -55,10 +55,6 @@ class PLMainFragment : PLMainContract.View, Fragment() {
                 }
             }
         }
-
-        tv_upload.setOnClickListener {
-            mPresenter.uploadToCloud()
-        }
     }
 
     override fun onDestroy() {

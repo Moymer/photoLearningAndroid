@@ -1,7 +1,11 @@
 package moymer.com.category
 
+import android.content.Context
 import moymer.com.data.CategoryRepository
+import moymer.com.data.SCallback
 import moymer.com.db.Category
+import moymer.com.utils.FileUtils
+import java.io.File
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -9,7 +13,7 @@ import kotlin.collections.ArrayList
  * Created by gabriellins @ moymer
  * on 31/07/18.
  */
-class SCategoryVisionPresenter: SCategoryVisionContract.Presenter {
+class SCategoryVisionPresenter : SCategoryVisionContract.Presenter {
 
     private var mCategoryVisionView: SCategoryVisionContract.View? = null
     private var mCategoryVisionAdapterView: SCategoryVisionContract.Adapter? = null
@@ -49,5 +53,26 @@ class SCategoryVisionPresenter: SCategoryVisionContract.Presenter {
         } else {
             "en"
         }
+    }
+
+    override fun uploadToCloud(context: Context) {
+
+        val fileUpload = File(FileUtils.getCloudDirectory(context))
+
+        mCategoryVisionView?.showLoading(true)
+
+        CategoryRepository.instance.uploadDirToCloud(fileUpload, object : SCallback<String>(true) {
+            override fun onSuccess(result: String) {
+
+                mCategoryVisionView?.showLoading(false)
+                mCategoryVisionView?.showToast(result)
+            }
+
+            override fun onFailure(errorDescription: String) {
+
+                mCategoryVisionView?.showLoading(false)
+                mCategoryVisionView?.showToast(errorDescription)
+            }
+        })
     }
 }

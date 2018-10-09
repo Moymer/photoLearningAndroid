@@ -19,6 +19,5 @@ interface PLMainContract {
         fun processCapturedPhoto(context: Context?, currentPhotoPath: String) : String?
         fun setFilePath(path: String?)
 
-        fun uploadToCloud()
     }
 }
