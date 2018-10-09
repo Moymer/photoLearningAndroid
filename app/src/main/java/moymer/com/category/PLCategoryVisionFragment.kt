@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import moymer.com.category.recyclerview.SCategoryVisionAdapter
+import moymer.com.category.recyclerview.PLCategoryVisionAdapter
 import kotlinx.android.synthetic.main.frag_category_vision.*
 import moymer.com.photolearning.R
 
@@ -15,11 +15,11 @@ import moymer.com.photolearning.R
  * Created by gabriellins @ moymer
  * on 31/07/18.
  */
-class SCategoryVisionFragment: Fragment(), SCategoryVisionContract.View {
+class PLCategoryVisionFragment: Fragment(), PLCategoryVisionContract.View {
 
     var layoutManager: LinearLayoutManager? = null
 
-    private var mPresenter: SCategoryVisionContract.Presenter = SCategoryVisionPresenter()
+    private var mPresenter: PLCategoryVisionContract.Presenter = PLCategoryVisionPresenter()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.frag_category_vision, container, false)
@@ -49,7 +49,7 @@ class SCategoryVisionFragment: Fragment(), SCategoryVisionContract.View {
     }
 
     private fun setRecyclerViewLayout() {
-        rv_category.adapter = SCategoryVisionAdapter(this.context, mPresenter)
+        rv_category.adapter = PLCategoryVisionAdapter(this.context, mPresenter)
         layoutManager = LinearLayoutManager(context)
         rv_category.layoutManager = layoutManager
     }

@@ -6,7 +6,7 @@ import moymer.com.PLApplication
  * Created by gabriellins @ moymer
  * on 20/07/18.
  */
-abstract class SCallback<T> constructor(private val returnOnMain: Boolean = true) {
+abstract class PLCallback<T> constructor(private val returnOnMain: Boolean = true) {
 
     abstract fun onSuccess(result: T)
     abstract fun onFailure(errorDescription: String)

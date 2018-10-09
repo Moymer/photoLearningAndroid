@@ -1,7 +1,5 @@
 package moymer.com.category.recyclerview
 
-import android.app.Activity
-import android.app.Activity.RESULT_OK
 import android.content.Context
 import android.content.Intent
 import android.support.v7.widget.AppCompatImageView
@@ -15,15 +13,14 @@ import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import kotlinx.android.synthetic.main.item_category.view.*
 import kotlinx.android.synthetic.main.item_category_header.view.*
-import moymer.com.category.SCategoryVisionContract
+import moymer.com.category.PLCategoryVisionContract
 import moymer.com.db.Category
-import moymer.com.learnedwords.SLearnedWordsVisionActivity
-import moymer.com.photolearning.PLMainActivity
+import moymer.com.learnedwords.PLLearnedWordsVisionActivity
 import moymer.com.photolearning.R
 import java.util.*
 
 
-class SCategoryVisionAdapter (private val context: Context?, val presenter: SCategoryVisionContract.Presenter) : RecyclerView.Adapter<RecyclerView.ViewHolder>(), SCategoryVisionContract.Adapter {
+class PLCategoryVisionAdapter (private val context: Context?, val presenter: PLCategoryVisionContract.Presenter) : RecyclerView.Adapter<RecyclerView.ViewHolder>(), PLCategoryVisionContract.Adapter {
 
     private val TYPE_HEADER = 0
     private val TYPE_ITEM = 1
@@ -106,13 +103,13 @@ class SCategoryVisionAdapter (private val context: Context?, val presenter: SCat
     }
 
     private fun launchCameraActivity(category: Category?) {
-        val intent = Intent(context, SLearnedWordsVisionActivity::class.java)
+        val intent = Intent(context, PLLearnedWordsVisionActivity::class.java)
         intent.putExtra("categoryId", category?.categoryId)
         context?.startActivity(intent)
     }
 
     private fun launchLearnedVisionWordsActivity(category: Category) {
-//        val intent = Intent(context, SLearnedWordsVisionActivity::class.java)
+//        val intent = Intent(context, PLLearnedWordsVisionActivity::class.java)
 //        intent.putExtra("category", category)
 //        context?.startActivity(intent)
     }

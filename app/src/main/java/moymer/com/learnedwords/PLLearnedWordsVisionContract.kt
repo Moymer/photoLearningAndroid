@@ -9,7 +9,7 @@ import java.util.ArrayList
  * Created by gabriellins @ moymer
  * on 31/07/18.
  */
-interface SLearnedWordsVisionContract {
+interface PLLearnedWordsVisionContract {
 
     interface View : BaseView<Presenter> {
 

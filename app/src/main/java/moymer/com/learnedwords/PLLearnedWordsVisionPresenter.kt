@@ -9,15 +9,15 @@ import kotlin.collections.ArrayList
  * Created by gabriellins @ moymer
  * on 31/07/18.
  */
-class SLearnedWordsVisionPresenter: SLearnedWordsVisionContract.Presenter {
+class PLLearnedWordsVisionPresenter: PLLearnedWordsVisionContract.Presenter {
 
-    private var mLearnedWordsVisionView: SLearnedWordsVisionContract.View? = null
-    private var mLearnedWordsVisionAdapterView: SLearnedWordsVisionContract.Adapter? = null
+    private var mLearnedWordsVisionView: PLLearnedWordsVisionContract.View? = null
+    private var mLearnedWordsVisionAdapterView: PLLearnedWordsVisionContract.Adapter? = null
 
     private var mLearnedWordsList = ArrayList<String>(0)
     private var mCategory: Category = Category()
 
-    override fun takeView(view: SLearnedWordsVisionContract.View) {
+    override fun takeView(view: PLLearnedWordsVisionContract.View) {
         mLearnedWordsVisionView = view
     }
 
@@ -25,7 +25,7 @@ class SLearnedWordsVisionPresenter: SLearnedWordsVisionContract.Presenter {
         mLearnedWordsVisionView = null
     }
 
-    override fun takeAdapterView(adapterView: SLearnedWordsVisionContract.Adapter) {
+    override fun takeAdapterView(adapterView: PLLearnedWordsVisionContract.Adapter) {
         mLearnedWordsVisionAdapterView = adapterView
         setLearnedWords(mCategory.labels as ArrayList<String>)
     }

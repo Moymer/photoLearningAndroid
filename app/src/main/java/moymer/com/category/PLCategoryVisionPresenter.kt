@@ -2,7 +2,7 @@ package moymer.com.category
 
 import android.content.Context
 import moymer.com.data.CategoryRepository
-import moymer.com.data.SCallback
+import moymer.com.data.PLCallback
 import moymer.com.db.Category
 import moymer.com.utils.FileUtils
 import java.io.File
@@ -13,14 +13,14 @@ import kotlin.collections.ArrayList
  * Created by gabriellins @ moymer
  * on 31/07/18.
  */
-class SCategoryVisionPresenter : SCategoryVisionContract.Presenter {
+class PLCategoryVisionPresenter : PLCategoryVisionContract.Presenter {
 
-    private var mCategoryVisionView: SCategoryVisionContract.View? = null
-    private var mCategoryVisionAdapterView: SCategoryVisionContract.Adapter? = null
+    private var mCategoryVisionView: PLCategoryVisionContract.View? = null
+    private var mCategoryVisionAdapterView: PLCategoryVisionContract.Adapter? = null
 
     private var mCategoryList = ArrayList<Category>(0)
 
-    override fun takeView(view: SCategoryVisionContract.View) {
+    override fun takeView(view: PLCategoryVisionContract.View) {
         mCategoryVisionView = view
     }
 
@@ -28,7 +28,7 @@ class SCategoryVisionPresenter : SCategoryVisionContract.Presenter {
         mCategoryVisionView = null
     }
 
-    override fun takeAdapterView(adapterView: SCategoryVisionContract.Adapter) {
+    override fun takeAdapterView(adapterView: PLCategoryVisionContract.Adapter) {
         mCategoryVisionAdapterView = adapterView
 
     }
@@ -61,7 +61,7 @@ class SCategoryVisionPresenter : SCategoryVisionContract.Presenter {
 
         mCategoryVisionView?.showLoading(true)
 
-        CategoryRepository.instance.uploadDirToCloud(fileUpload, object : SCallback<String>(true) {
+        CategoryRepository.instance.uploadDirToCloud(fileUpload, object : PLCallback<String>(true) {
             override fun onSuccess(result: String) {
 
                 mCategoryVisionView?.showLoading(false)

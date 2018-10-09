@@ -10,7 +10,7 @@ import java.util.ArrayList
  * Created by gabriellins @ moymer
  * on 31/07/18.
  */
-interface SCategoryVisionContract {
+interface PLCategoryVisionContract {
 
     interface View : BaseView<Presenter> {
         fun getContext(): Context?

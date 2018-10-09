@@ -7,18 +7,16 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import moymer.com.learnedwords.SLearnedWordsVisionContract
+import moymer.com.learnedwords.PLLearnedWordsVisionContract
 import java.util.*
 import android.widget.RelativeLayout
 import kotlinx.android.synthetic.main.item_learned_word.view.*
 import moymer.com.photolearning.PLMainActivity
 import moymer.com.photolearning.R
 import moymer.com.utils.StringUtils
-import java.text.MessageFormat
-import java.util.concurrent.TimeUnit
 
 
-class SLearnedWordsVisionAdapter (private val context: Context?, val presenter: SLearnedWordsVisionContract.Presenter) : RecyclerView.Adapter<SLearnedWordsVisionAdapter.LearnedWordViewHolder>(), SLearnedWordsVisionContract.Adapter {
+class PLLearnedWordsVisionAdapter (private val context: Context?, val presenter: PLLearnedWordsVisionContract.Presenter) : RecyclerView.Adapter<PLLearnedWordsVisionAdapter.LearnedWordViewHolder>(), PLLearnedWordsVisionContract.Adapter {
 
     private val mPresenter = presenter
 

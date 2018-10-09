@@ -21,15 +21,15 @@ class FileUploader private constructor() : FileUploadSource {
     private val source = CloudSource.GOOGLE
 
 
-    override fun uploadFile(key: String, filePath: String, contentType: FileContentType, deleteOnFinish: Boolean?, callback: SCloudStorageCallback<String>) {
+    override fun uploadFile(key: String, filePath: String, contentType: FileContentType, deleteOnFinish: Boolean?, callback: PLCloudStorageCallback<String>) {
         storageSource.uploadFile(key, filePath, contentType, deleteOnFinish, callback)
     }
 
-    override fun uploadDir(keyBase: String, dir: File, callback: SCloudStorageCallback<String>) {
+    override fun uploadDir(keyBase: String, dir: File, callback: PLCloudStorageCallback<String>) {
         storageSource.uploadDir(keyBase, dir, callback)
     }
 
-    override fun uploadDir(keyBase: String, dir: File, fileContentTypeToUpload: FileContentType?, callback: SCloudStorageCallback<String>) {
+    override fun uploadDir(keyBase: String, dir: File, fileContentTypeToUpload: FileContentType?, callback: PLCloudStorageCallback<String>) {
         storageSource.uploadDir(keyBase, dir, fileContentTypeToUpload, callback)
     }
 

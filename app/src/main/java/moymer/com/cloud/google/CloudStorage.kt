@@ -7,7 +7,7 @@ import com.google.firebase.storage.StorageMetadata
 import com.google.firebase.storage.UploadTask
 import moymer.com.cloud.FileContentType
 import moymer.com.cloud.FileUploadSource
-import moymer.com.cloud.SCloudStorageCallback
+import moymer.com.cloud.PLCloudStorageCallback
 import moymer.com.utils.Constants
 import java.io.File
 import java.util.*
@@ -34,17 +34,17 @@ class CloudStorage : FileUploadSource {
         return Constants.sIntervalPublicAddress
     }
 
-    override fun uploadFile(key: String, filePath: String, contentType: FileContentType, deleteOnFinish: Boolean?, callback: SCloudStorageCallback<String>) {
+    override fun uploadFile(key: String, filePath: String, contentType: FileContentType, deleteOnFinish: Boolean?, callback: PLCloudStorageCallback<String>) {
         uploadFile(key, filePath, contentType, callback, deleteOnFinish)
     }
 
-    override fun uploadDir(keyBase: String, dir: File, callback: SCloudStorageCallback<String>) {
+    override fun uploadDir(keyBase: String, dir: File, callback: PLCloudStorageCallback<String>) {
         uploadDir(keyBase, dir, null, callback)
     }
 
-    override fun uploadDir(keyBase: String, dir: File, fileContentTypeToUpload: FileContentType?, callback: SCloudStorageCallback<String>) {
+    override fun uploadDir(keyBase: String, dir: File, fileContentTypeToUpload: FileContentType?, callback: PLCloudStorageCallback<String>) {
         val uploadTasks = ArrayList<UploadTask>()
-        val fileCallback = object : SCloudStorageCallback<String>(false) {
+        val fileCallback = object : PLCloudStorageCallback<String>(false) {
 
             override fun uploadedDir(success: Boolean) {
                 TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -75,7 +75,7 @@ class CloudStorage : FileUploadSource {
         }
     }
 
-    private fun uploadDirCloudStorageRec(keyBase: String, dir: File, fileContentTypeToUpload: FileContentType?, uploadTasks: MutableList<UploadTask>, fileCallback: SCloudStorageCallback<String>): Long {
+    private fun uploadDirCloudStorageRec(keyBase: String, dir: File, fileContentTypeToUpload: FileContentType?, uploadTasks: MutableList<UploadTask>, fileCallback: PLCloudStorageCallback<String>): Long {
 
         var totalBytes: Long = 0
         val fileList = dir.listFiles()
@@ -105,7 +105,7 @@ class CloudStorage : FileUploadSource {
         return totalBytes
     }
 
-    private fun uploadFile(key: String, filePath: String, contentType: FileContentType, listener: SCloudStorageCallback<String>, deleteOnFinish: Boolean?): UploadTask {
+    private fun uploadFile(key: String, filePath: String, contentType: FileContentType, listener: PLCloudStorageCallback<String>, deleteOnFinish: Boolean?): UploadTask {
 
         val file = File(filePath)
         val fileUri = Uri.fromFile(file)

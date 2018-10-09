@@ -5,15 +5,15 @@ import android.support.v7.app.AppCompatActivity
 import moymer.com.photolearning.R
 import moymer.com.utils.ActivityUtils
 
-class SCategoryVisionActivity: AppCompatActivity() {
+class PLCategoryVisionActivity: AppCompatActivity() {
 
-    private var injectedFragment: SCategoryVisionFragment = SCategoryVisionFragment()
+    private var injectedFragment: PLCategoryVisionFragment = PLCategoryVisionFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var categoryVisionFragment: SCategoryVisionFragment? = supportFragmentManager.findFragmentById(R.id.fragment_container) as SCategoryVisionFragment?
+        var categoryVisionFragment: PLCategoryVisionFragment? = supportFragmentManager.findFragmentById(R.id.fragment_container) as PLCategoryVisionFragment?
 
         if (categoryVisionFragment == null) {
             categoryVisionFragment = injectedFragment

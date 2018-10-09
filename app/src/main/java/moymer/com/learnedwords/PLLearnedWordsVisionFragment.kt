@@ -11,17 +11,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.frag_learned_words_vision.*
-import moymer.com.learnedwords.recyclerview.SLearnedWordsVisionAdapter
+import moymer.com.learnedwords.recyclerview.PLLearnedWordsVisionAdapter
 import moymer.com.photolearning.R
 
 /**
  * Created by gabriellins @ moymer
  * on 31/07/18.
  */
-class SLearnedWordsVisionFragment: Fragment(), SLearnedWordsVisionContract.View {
+class PLLearnedWordsVisionFragment: Fragment(), PLLearnedWordsVisionContract.View {
     var layoutManager: LinearLayoutManager? = null
 
-    var mPresenter: SLearnedWordsVisionContract.Presenter = SLearnedWordsVisionPresenter()
+    var mPresenter: PLLearnedWordsVisionContract.Presenter = PLLearnedWordsVisionPresenter()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.frag_learned_words_vision, container, false)
@@ -52,7 +52,7 @@ class SLearnedWordsVisionFragment: Fragment(), SLearnedWordsVisionContract.View 
     }
 
     private fun setRecyclerViewLayout() {
-        rv_words.adapter = SLearnedWordsVisionAdapter(this.context, mPresenter)
+        rv_words.adapter = PLLearnedWordsVisionAdapter(this.context, mPresenter)
         layoutManager = LinearLayoutManager(context)
         rv_words.layoutManager = layoutManager
     }

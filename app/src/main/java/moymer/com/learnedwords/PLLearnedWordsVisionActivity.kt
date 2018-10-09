@@ -5,15 +5,15 @@ import android.support.v7.app.AppCompatActivity
 import moymer.com.photolearning.R
 import moymer.com.utils.ActivityUtils
 
-class SLearnedWordsVisionActivity: AppCompatActivity() {
+class PLLearnedWordsVisionActivity: AppCompatActivity() {
 
-    var injectedFragment: SLearnedWordsVisionFragment = SLearnedWordsVisionFragment()
+    var injectedFragment: PLLearnedWordsVisionFragment = PLLearnedWordsVisionFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var learnedWordsFragment: SLearnedWordsVisionFragment? = supportFragmentManager.findFragmentById(R.id.fragment_container) as SLearnedWordsVisionFragment?
+        var learnedWordsFragment: PLLearnedWordsVisionFragment? = supportFragmentManager.findFragmentById(R.id.fragment_container) as PLLearnedWordsVisionFragment?
 
         if (learnedWordsFragment == null) {
             learnedWordsFragment = injectedFragment

@@ -2,7 +2,7 @@ package moymer.com.cloud
 
 import moymer.com.PLApplication
 
-abstract class SCloudStorageCallback<String>(returnOnMain: Boolean?) {
+abstract class PLCloudStorageCallback<String>(returnOnMain: Boolean?) {
 
     var returnOnMain = true
 

@@ -7,7 +7,7 @@ import moymer.com.utils.ActivityUtils
 import android.content.Intent
 import android.view.Menu
 import android.view.MenuItem
-import moymer.com.category.SCategoryVisionActivity
+import moymer.com.category.PLCategoryVisionActivity
 
 
 class PLMainActivity : AppCompatActivity() {
@@ -45,7 +45,7 @@ class PLMainActivity : AppCompatActivity() {
     }
 
     private fun launchCategoriesActivity() {
-        val intent = Intent(this, SCategoryVisionActivity::class.java)
+        val intent = Intent(this, PLCategoryVisionActivity::class.java)
         startActivity(intent)
     }
 }

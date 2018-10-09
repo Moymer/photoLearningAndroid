@@ -4,7 +4,7 @@ import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
 import moymer.com.PLApplication
 import moymer.com.cloud.FileUploader
-import moymer.com.cloud.SCloudStorageCallback
+import moymer.com.cloud.PLCloudStorageCallback
 import moymer.com.db.Category
 import moymer.com.utils.CloudUtils
 import java.io.File
@@ -46,10 +46,10 @@ class CategoryRepository private constructor(){
         return Category()
     }
 
-    fun uploadDirToCloud(file: File, callback: SCallback<String>) {
+    fun uploadDirToCloud(file: File, callback: PLCallback<String>) {
 
         val key = CloudUtils.getPhotoKeyBase()
-        FileUploader.instance.uploadDir(key, file, object: SCloudStorageCallback<String>(false) {
+        FileUploader.instance.uploadDir(key, file, object: PLCloudStorageCallback<String>(false) {
             override fun uploadedDir(success: Boolean) {
                 takeIf { success }?.apply {
                     callback.onSuccessThread("Fotos enviadas com sucesso")
