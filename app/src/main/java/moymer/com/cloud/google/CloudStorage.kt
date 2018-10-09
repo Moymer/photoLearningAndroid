@@ -46,6 +46,10 @@ class CloudStorage : FileUploadSource {
         val uploadTasks = ArrayList<UploadTask>()
         val fileCallback = object : SCloudStorageCallback<String>(false) {
 
+            override fun uploadedDir(success: Boolean) {
+                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+
             var totalUploaded: Int = 0
             var totalBytesUploaded: Long = 0L
             var hasRespondedError = false

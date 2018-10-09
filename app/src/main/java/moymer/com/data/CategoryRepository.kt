@@ -50,6 +50,11 @@ class CategoryRepository private constructor(){
 
         val key = CloudUtils.getPhotoKeyBase()
         FileUploader.instance.uploadDir(key, file, object: SCloudStorageCallback<String>(false) {
+            override fun uploadedDir(success: Boolean) {
+                takeIf { success }?.apply {
+                    callback.onSuccessThread("Fotos enviadas com sucesso")
+                } ?: callback.onFailureThread("Não foi possivel enviar as fotos")
+            }
 
             override fun uploadedFile(result: String, bytes: Long) {
                 takeIf { result.isNotEmpty() }?.apply {

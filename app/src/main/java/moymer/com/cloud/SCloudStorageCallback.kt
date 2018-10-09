@@ -11,7 +11,7 @@ abstract class SCloudStorageCallback<String>(returnOnMain: Boolean?) {
     }
 
     abstract fun uploadedFile(result: String, bytes: Long)
-    fun uploadedDir(success: Boolean){}
+    abstract fun uploadedDir(success: Boolean)
 
     fun onUploadedFileThread(result: String?, bytes: Long) {
         if (returnOnMain) {
